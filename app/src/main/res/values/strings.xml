@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Application_test</string>
+    <string name="MainActivity_tv1">加载中。。。</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="neterror">网络连接错误</string>
+    <string name="netok">网络环境良好</string>
+    <string name="login_User">请输入用户名</string>
+    <string name="login_tv1">立即注册</string>
+    <string name="login_bt1">登录</string>
+    <string name="login_tishi1">账户或密码不能为空</string>
+    <string name="froget_tv1">去登陆</string>
+    <string name="forget_tv2">在线客服</string>
+    <string name="login_tv2">忘记密码</string>
+    <string name="login_tv3">在线客服</string>
+    <string name="forget_bt1">获取验证码</string>
+</resources>
