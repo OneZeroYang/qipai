@@ -27,7 +27,7 @@
 
     <LinearLayout
 
-        android:layout_margin="25dp"
+        android:layout_margin="5dp"
         android:background="@color/colorBACK"
         android:padding="5dp"
         android:orientation="horizontal"
@@ -112,7 +112,7 @@
     <Button
         android:id="@+id/login_bt1"
         android:text="@string/login_bt1"
-        android:layout_margin="60dp"
+        android:layout_margin="10dp"
         android:layout_width="500dp"
         android:layout_height="wrap_content" />
 

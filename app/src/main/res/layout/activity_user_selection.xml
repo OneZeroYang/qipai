@@ -8,7 +8,7 @@
     tools:context=".User_selectionActivity">
 
     <ImageView
-        android:paddingBottom="150dp"
+        android:paddingBottom="0dp"
         android:src="@drawable/ic_launcher_background"
         android:layout_centerInParent="true"
         android:id="@+id/login_log"
