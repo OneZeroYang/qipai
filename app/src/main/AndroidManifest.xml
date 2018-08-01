@@ -3,6 +3,10 @@
     package="com.meiji.yangshijie.myapplication_test">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.access_wifi_state" />
+    <uses-permission android:name="android.permission.access_network_state" />
+
+
 
     <application
         android:allowBackup="true"
@@ -20,7 +24,30 @@
         </activity>
         <activity android:name=".User_selectionActivity" />
         <activity android:name=".register.LoginActivity" />
-        <activity android:name=".register.ForgetpasswordActivity"></activity>
+        <activity android:name=".register.ForgetpasswordActivity" />
+        <activity android:name=".register.RegisterActivity" />
+        <activity android:name=".register.AgreementActivity"></activity>
+
+        <service android:name=".SystemService">
+
+        </service>
+
+        <!--监听网络状态   -->
+
+        <receiver android:name=".Receiver.NetworkConnectChangedReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+
     </application>
+
+
+
+
+
 
 </manifest>

@@ -1,13 +1,25 @@
 package com.meiji.yangshijie.myapplication_test;
 
+import android.accounts.NetworkErrorException;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.KeyEvent;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.meiji.yangshijie.myapplication_test.Receiver.NetworkConnectChangedReceiver;
+import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
 import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
+import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
 /**
   *  描述：ACTIVITY的所有基类
@@ -15,6 +27,12 @@ import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
   **/
 
 public abstract class BaseActivity extends Activity {
+    private static Context context;
+    private NetworkConnectChangedReceiver networkConnectChangedReceiver = new NetworkConnectChangedReceiver();
+
+
+
+
 
 
     @Override
@@ -23,6 +41,20 @@ public abstract class BaseActivity extends Activity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);// 设置全屏
         super.onCreate(savedInstanceState);
         setContentView(setView());
+        if (Variable.isstarat){
+            //初始化所有配置
+//            IntentFilter filter = new IntentFilter();
+//            filter.addAction(WifiManager.WIFI_STATE_CHANGED_ACTION);
+//            filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+//            filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+//            registerReceiver(networkConnectChangedReceiver, filter);
+
+
+
+        }
+        this.context=this;
+        Variable.isstarat=false;
+
 
         init();
 
@@ -52,6 +84,14 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+//        Variable.isNetwork=false;//是否有网络
+//        Variable.isOnline=false;//是否已登录
+//        Variable.isstarat=true;//是否加载第一个Activity
+//        Variable.isout=false;
+
+
+        //unregisterReceiver(networkConnectChangedReceiver);
+
     }
 
     @Override
@@ -68,32 +108,73 @@ public abstract class BaseActivity extends Activity {
   *  描述：初始化
   *  时间：2018/7/31 10:55
   **/
-    private  void init(){
+    private void init(){
+
+
+
+
+
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//强制横屏
+        initViews();
+        initData();
 
-        SystemService.Isnet(getApplicationContext(), new NetworkCallk() {
-            //网络没有问题
-            @Override
-            public void Onnormal(String s) {
-                // ToastUtils.showToast(getResources().getString(R.string.netok),getApplicationContext());
-                initViews();
-                initData();
-            }
 
-            //网络有问题
-            @Override
-            public void Onerror(String s) {
-                ToastUtils.showToast(getResources().getString(R.string.neterror),getApplicationContext());
+        startService(new Intent(getApplicationContext(),SystemService.class));
+        initNetwork(getApplicationContext());
 
-            }
-        });
+
+
+
+
+
 
     }
     protected abstract int setView();
     protected abstract void initViews();
     protected abstract void initData();
 
+    protected  abstract  void Error(String s);
 
 
+    /**
+      *  描述：网络环境监测
+      *  时间：2018/8/1 14:30
+      **/
+    public void initNetwork(final Context context){
+        SystemService.Isnet(context.getApplicationContext(), new NetworkCallk() {
+            //网络没有问题
+            @Override
+            public void Onnormal(String s) {
+                Variable.isNetwork=true;
+                // ToastUtils.showToast(getResources().getString(R.string.netok),getApplicationContext());
+
+            }
+
+            //网络有问题
+            @Override
+            public void Onerror(String s) {
+                Variable.isNetwork=false;
+                Error("网络错误");
+                ToastUtils.showToast(context.getResources().getString(R.string.neterror),context.getApplicationContext());
+            }
+        });
+    }
+    public static void NetworkErrorException(){
+        DialogUtil dialogUtil=new DialogUtil(context);
+        dialogUtil.CreateNetworkDialog();
+        dialogUtil.ShowNetworkDialog();
+
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode==KeyEvent.KEYCODE_BACK){
+            DialogUtil dialogUtil=new DialogUtil(this);
+            dialogUtil.CreateExitDialog();
+            dialogUtil.ShowExitDialog();
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 }

@@ -59,6 +59,11 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
     }
 
     @Override
+    protected void Error(String s) {
+
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.forget_psw_bt1:
@@ -87,6 +92,8 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
   *  时间：2018/7/31 16:42
   **/
     private void updataUI() {
+
+
         ToastUtils.showToast(getApplicationContext(),"发送成功！注意查收");
         forgetPswBt1.setEnabled(false);
         new Thread(){

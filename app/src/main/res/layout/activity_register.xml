@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".register.RegisterActivity">
+
+    <LinearLayout style="@style/login_2">
+
+        <ImageView
+            style="@style/login_Image"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/register_ed1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBACK"
+            android:hint="@string/registere_ed1" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/login_2"
+        android:layout_marginTop="10dp"
+        >
+
+        <ImageView
+            style="@style/login_Image"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/register_ed2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBACK"
+            android:hint="请输入密码" />
+    </LinearLayout>
+    <LinearLayout android:layout_marginTop="10dp" style="@style/login_2">
+
+        <ImageView
+            style="@style/login_Image"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/register_ed3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBACK"
+            android:hint="请确认密码" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/login_2" android:layout_marginTop="10dp">
+
+        <ImageView
+            style="@style/login_Image"
+            android:src="@drawable/ic_launcher_background" />
+
+        <EditText
+            android:id="@+id/register_ed4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBACK"
+            android:hint="代理邀请码码" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:padding="0dp"
+            android:layout_weight="0.5"
+            android:id="@+id/register_ed5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBACK" />
+
+        <TextView
+
+            android:textSize="35sp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:id="@+id/register_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="8888" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="400dp"
+        android:layout_height="30dp">
+
+        <CheckBox
+            android:id="@+id/register_cb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/register_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/register_cb1"
+            android:text="开户条约"
+            android:layout_toRightOf="@+id/register_cb1" />
+
+        <TextView
+
+
+            android:gravity="center"
+            android:id="@+id/register_tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="去登陆"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout >
+
+
+    <Button
+        android:text="注册"
+        android:id="@+id/register_bt1"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateIds" />
+
+
+
+
+</LinearLayout>

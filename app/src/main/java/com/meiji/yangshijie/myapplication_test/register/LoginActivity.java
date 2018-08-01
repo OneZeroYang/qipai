@@ -1,5 +1,8 @@
 package com.meiji.yangshijie.myapplication_test.register;
 
+import android.app.Dialog;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,12 +13,13 @@ import android.widget.LinearLayout;
 
 import com.meiji.yangshijie.myapplication_test.BaseActivity;
 import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
 import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 
 /**
-  *  描述：登录Activity
-  *  时间：2018/7/31 13:43
-  **/
+ * 描述：登录Activity
+ * 时间：2018/7/31 13:43
+ **/
 public class LoginActivity extends BaseActivity implements View.OnClickListener {
     private EditText loginEdName;
     private EditText loginEdPassword;
@@ -23,9 +27,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     private LinearLayout loginLi2;
     private LinearLayout loginLi3;
     private Button loginBt1;
-
-
-
 
     @Override
     protected int setView() {
@@ -46,8 +47,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         loginLi2.setOnClickListener(this);
         loginLi3.setOnClickListener(this);
         loginBt1.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -56,36 +55,51 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     }
 
     @Override
+    protected void Error(String s) {
+
+    }
+
+    @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.login_ed_name:
                 break;
             case R.id.login_ed_password:
                 break;
-            case R.id.login_li1:
+            case R.id.login_li1://注册
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
-            case R.id.login_li2:
-                startActivity(new Intent(getApplicationContext(),ForgetpasswordActivity.class));
+            case R.id.login_li2://忘记密码
+                startActivity(new Intent(getApplicationContext(), ForgetpasswordActivity.class));
                 break;
-            case R.id.login_li3:
+            case R.id.login_li3://客服
                 break;
-            case R.id.login_bt1:
+            case R.id.login_bt1://登录
                 login();
                 break;
         }
     }
-/**
-  *  描述：登录函数
-  *  时间：2018/7/31 15:35
-  **/
+
+    /**
+     * 描述：登录函数
+     * 时间：2018/7/31 15:35
+     **/
     private void login() {
         String name = loginEdName.getText().toString().trim();
         String password = loginEdPassword.getText().toString().trim();
-        if (name.equals("")||password.equals("")){
-            ToastUtils.showToast(this,getString(R.string.login_tishi1));
-        }else {
+        if (name.equals("") || password.equals("")) {
+            ToastUtils.showToast(this, getString(R.string.login_tishi1));
+        } else {
             //登录逻辑
 
+
+
+            //正在登录时的对话框
+            DialogUtil dialog = new DialogUtil(LoginActivity.this);
+            dialog.CreateProgressDialg();
+            dialog.ShowProgressDialg();
         }
     }
+
+
 }

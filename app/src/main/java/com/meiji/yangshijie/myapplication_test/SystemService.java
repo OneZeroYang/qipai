@@ -8,17 +8,28 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 
 import com.meiji.yangshijie.myapplication_test.utils.NetworkUtils;
+import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
 /**
-  *  描述：系统服务
-  *  时间：2018/7/31 14:00
-  **/
+ * 描述：系统服务
+ * 时间：2018/7/31 14:00
+ **/
 public class SystemService extends Service {
 
-    private static Context context=null;
-    public SystemService(Context context){
-        this.context=context;
+    private static NetworkCallk networkCallk;
+
+    private Thread netThread;
+
+    private static Context context = null;
+
+    public SystemService() {
+
     }
+
+    public SystemService(Context context) {
+        this.context = context;
+    }
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -35,26 +46,42 @@ public class SystemService extends Service {
         super.onCreate();
 
 
+        init();
 
+
+    }
+
+    private void init() {
+
+        /**
+         *  描述：网络监听
+         *  时间：2018/8/1 15:40
+         **/
+        if (context != null) {
+            if (NetworkUtils.isNetworkAvailable(context)) {
+                networkCallk.Onnormal("");
+            } else {
+                networkCallk.Onerror(context.getResources().getString(R.string.neterror));
+            }
+        } else {
+            networkCallk.Onerror(context.getResources().getString(R.string.neterror));
+        }
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+
         return super.onStartCommand(intent, flags, startId);
     }
 
-    public static void Isnet(Context context,NetworkCallk networkCallk){
+    public static void Isnet(Context context, NetworkCallk networkCallk) {
 
-        if (context!=null){
-            if (NetworkUtils.isNetworkAvailable(context)){
-                networkCallk.Onnormal("");
-            }else {
-                networkCallk.Onerror(context.getResources().getString(R.string.neterror));
-            }
-        }else {
-            networkCallk.Onerror(context.getResources().getString(R.string.neterror));
-        }
+        SystemService.networkCallk = networkCallk;
+        SystemService.context = context;
+
 
     }
+
 
 }

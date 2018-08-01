@@ -1,5 +1,6 @@
 package com.meiji.yangshijie.myapplication_test;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
@@ -7,7 +8,9 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
 import com.meiji.yangshijie.myapplication_test.utils.MsgUtils;
+import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
 /**
   *  描述：启动界面
@@ -38,6 +41,12 @@ public class MainActivity extends BaseActivity {
     }
     @Override
     protected void initViews() {
+        /**
+         *
+         * 在这里判断是否已登录（已有账户）
+         *
+         */
+        Variable.isOnline=false;
         mainLog = (ImageView) findViewById(R.id.main_log);
         mainTv1 = (TextView) findViewById(R.id.main_tv_1);
         mainPb1 = (ProgressBar) findViewById(R.id.main_pb_1);
@@ -50,6 +59,14 @@ public class MainActivity extends BaseActivity {
 
 
     }
+
+    @Override
+    protected void Error(String s) {
+        DialogUtil dialogUtil=new DialogUtil(MainActivity.this);
+        dialogUtil.CreateNetworkDialog();
+        dialogUtil.ShowNetworkDialog();
+    }
+
     /**
       *  描述：模拟启动进度条
       *  时间：2018/7/31 11:25
@@ -74,7 +91,14 @@ public class MainActivity extends BaseActivity {
                       runOnUiThread(new Runnable() {
                           @Override
                           public void run() {
-                              startLoginActivity();
+                              if (Variable.isNetwork==true){
+                                  if (Variable.isOnline==false){
+                                      //之前没有登录过
+                                      startLoginActivity();
+                                  }else {
+                                      //用户之前已登录
+                                  }
+                              }
                           }
                       });
                   }
@@ -89,6 +113,7 @@ public class MainActivity extends BaseActivity {
       *  时间：2018/7/31 11:40
       **/
     private void startLoginActivity() {
+
         startActivity(new Intent(getApplicationContext(),User_selectionActivity.class));
         finish();
 

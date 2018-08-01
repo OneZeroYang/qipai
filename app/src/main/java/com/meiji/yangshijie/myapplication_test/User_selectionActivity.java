@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.meiji.yangshijie.myapplication_test.register.LoginActivity;
+import com.meiji.yangshijie.myapplication_test.register.RegisterActivity;
 import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 
 
@@ -44,6 +45,11 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
 
     }
 
+    @Override
+    protected void Error(String s) {
+
+    }
+
 
     /**
       *  描述：点击事件
@@ -59,7 +65,7 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
                 break;
             case R.id.login_bt2:
                 ToastUtils.showToast(getApplicationContext(),getResources().getString(R.string.register));
-                //startActivity(new Intent());
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
     }

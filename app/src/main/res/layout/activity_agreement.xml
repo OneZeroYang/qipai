@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/agreement_rl"
+    tools:context=".register.AgreementActivity">
+
+    <TextView
+        android:id="@+id/agreement_tv1"
+        android:layout_alignParentRight="true"
+        android:textSize="25sp"
+        android:text="@string/agreement_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/agreement_tv2"
+        android:layout_below="@id/agreement_tv1"
+        android:layout_centerHorizontal="true"
+        android:text="开户条约"
+        android:textSize="50sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/agreement_sv"
+        android:layout_below="@id/agreement_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:padding="25dp"
+            android:text="@string/lion_yo_android_android_linearlayout_android_linearlayout_orientation_vertical_imageview_android_color_0_layout_weight_1_1_1_1_relativelayout_true_id_relativelayout_id_margin_padding_margin_android_layout_margin_android_layout_marginleft_android_layout_margintop_android_layout_marginright_android_layout_marginbottom_padding_textview_margin_50dp_android_google_linearlayout_http_www_android_doc_com_reference_android_widget_linearlayout_html_app_app_app_1_2_3_connected_devices_app_4_congratulations_app_android_ios_ps_hhhh_sealynn0_demons_imagine_dragons_lion"
+            android:id="@+id/agreement_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ScrollView>
+
+    <Button
+
+        android:textSize="25sp"
+        android:background="@color/agreement_bt1"
+        android:text="@string/agreement_bt1"
+        android:id="@+id/agreement_bt1"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
