@@ -116,6 +116,9 @@ public class DialogUtil {
         ExitDialog.setTitle("是否退出游戏？");
         ExitDialog.setMessage("您确定要退出游戏吗？");
         ExitDialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+
+
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 ExitUtils.ExitApp(context);
