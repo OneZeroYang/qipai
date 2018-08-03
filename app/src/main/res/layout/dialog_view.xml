@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/dialog_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0e2170"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="end"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        
+        <LinearLayout
+            android:background="@drawable/ic_bc"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="250dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/ic_launcher_background"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:textColorHint="#206a91"
+
+                android:textSize="18sp"
+                android:gravity="center"
+                android:hint="@string/login_User"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_bc"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="250dp"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:src="@drawable/ic_launcher_background"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:textColorHint="#206a91"
+
+                android:textSize="18sp"
+                android:gravity="center"
+                android:hint="@string/login_User"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:textColor="@color/textcolor"
+                android:text="立即注册"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textColor="@color/textcolor"
+                android:text="忘记密码"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textColor="@color/textcolor"
+                android:text="在线客服"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button_1"
+            android:text="@string/login"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:layout_height="50dp" />
+
+
+
+
+
+      
+
+    </LinearLayout>
+
+  
+    
+    
+    <!--
+      <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button" />
+    
+    
+    -->
+</LinearLayout>

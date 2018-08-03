@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="UserData" ></dbname>
+
+    <version value="1" ></version>
+
+    <list>
+        <!--用户密码表-->
+
+        <mapping class="com.meiji.yangshijie.myapplication_test.db.UserData"></mapping>
+
+
+    </list>
+</litepal>
+

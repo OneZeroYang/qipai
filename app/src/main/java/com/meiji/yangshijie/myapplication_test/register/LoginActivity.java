@@ -32,7 +32,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected int setView() {
         return R.layout.activity_login;
     }
-
     @Override
     protected void initViews() {
         loginEdName = (EditText) findViewById(R.id.login_ed_name);
@@ -53,7 +52,6 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     protected void initData() {
 
     }
-
     @Override
     protected void Error(String s) {
 
@@ -68,6 +66,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 break;
             case R.id.login_li1://注册
                 startActivity(new Intent(this, RegisterActivity.class));
+                finish();
                 break;
             case R.id.login_li2://忘记密码
                 startActivity(new Intent(getApplicationContext(), ForgetpasswordActivity.class));
@@ -91,13 +90,11 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             ToastUtils.showToast(this, getString(R.string.login_tishi1));
         } else {
             //登录逻辑
-
-
-
             //正在登录时的对话框
             DialogUtil dialog = new DialogUtil(LoginActivity.this);
             dialog.CreateProgressDialg();
             dialog.ShowProgressDialg();
+
         }
     }
 

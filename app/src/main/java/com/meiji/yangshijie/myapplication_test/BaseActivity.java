@@ -11,6 +11,7 @@ import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
@@ -28,12 +29,8 @@ import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
 public abstract class BaseActivity extends Activity {
     private static Context context;
-    private NetworkConnectChangedReceiver networkConnectChangedReceiver = new NetworkConnectChangedReceiver();
-
-
-
-
-
+    private NetworkConnectChangedReceiver networkConnectChangedReceiver = new NetworkConnectChangedReceiver();//
+    private static DialogUtil dialogUtil=null;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,9 +45,7 @@ public abstract class BaseActivity extends Activity {
 //            filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
 //            filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
 //            registerReceiver(networkConnectChangedReceiver, filter);
-
-
-
+//            Variable.isout=false;
         }
         this.context=this;
         Variable.isstarat=false;
@@ -60,26 +55,16 @@ public abstract class BaseActivity extends Activity {
 
     }
 
-
-
-
 /**
   *  描述：这个界面要进行登录状态的判断、、、、、、、判断用户是否一直处于登录状态。。。。。。。若果不是则强制弹窗告知用户
   *  时间：2018/7/31 13:45
   **/
 
 
-
-
 /**
   *  描述：网络状态的判断   在较差的时候自动重连
   *  时间：2018/7/31 13:46
   **/
-
-
-
-
-
 
     @Override
     protected void onDestroy() {
@@ -88,9 +73,7 @@ public abstract class BaseActivity extends Activity {
 //        Variable.isOnline=false;//是否已登录
 //        Variable.isstarat=true;//是否加载第一个Activity
 //        Variable.isout=false;
-
-
-        //unregisterReceiver(networkConnectChangedReceiver);
+            //unregisterReceiver(networkConnectChangedReceiver);
 
     }
 
@@ -110,25 +93,9 @@ public abstract class BaseActivity extends Activity {
   **/
     private void init(){
 
-
-
-
-
-
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//强制横屏
         initViews();
         initData();
-
-
-        startService(new Intent(getApplicationContext(),SystemService.class));
-        initNetwork(getApplicationContext());
-
-
-
-
-
-
-
     }
     protected abstract int setView();
     protected abstract void initViews();
@@ -150,7 +117,6 @@ public abstract class BaseActivity extends Activity {
                 // ToastUtils.showToast(getResources().getString(R.string.netok),getApplicationContext());
 
             }
-
             //网络有问题
             @Override
             public void Onerror(String s) {
@@ -161,12 +127,13 @@ public abstract class BaseActivity extends Activity {
         });
     }
     public static void NetworkErrorException(){
-        DialogUtil dialogUtil=new DialogUtil(context);
-        dialogUtil.CreateNetworkDialog();
-        dialogUtil.ShowNetworkDialog();
 
+        if (dialogUtil==null){
+            dialogUtil=new DialogUtil(context);
+            dialogUtil.CreateNetworkDialog();
+            dialogUtil.ShowNetworkDialog();
+        }
     }
-
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode==KeyEvent.KEYCODE_BACK){
@@ -176,5 +143,12 @@ public abstract class BaseActivity extends Activity {
         }
 
         return super.onKeyDown(keyCode, event);
+    }
+    @Override
+    protected void onRestart() {
+        if (dialogUtil!=null){
+            dialogUtil.DismissDialg();
+        }
+        super.onRestart();
     }
 }

@@ -12,8 +12,8 @@ import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 
 /**
- *  描述：忘记密码界面
- *  时间：2018/7/31 15:44
+ * 描述：忘记密码界面
+ * 时间：2018/7/31 15:44
  **/
 
 public class ForgetpasswordActivity extends BaseActivity implements View.OnClickListener {
@@ -26,9 +26,6 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
     private LinearLayout forgetPswLi1;
     private LinearLayout forgetPswLi2;
     private Button forgetPswBt2;
-
-
-
 
     @Override
     protected int setView() {
@@ -50,7 +47,6 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
         forgetPswLi2.setOnClickListener(this);
         forgetPswBt2.setOnClickListener(this);
 
-
     }
 
     @Override
@@ -65,14 +61,14 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.forget_psw_bt1:
                 //发送验证码
 
                 /**
-                  *  描述：模拟发送成功
-                  *  时间：2018/7/31 16:39
-                  **/
+                 *  描述：模拟发送成功
+                 *  时间：2018/7/31 16:39
+                 **/
 
 
                 updataUI();
@@ -87,33 +83,33 @@ public class ForgetpasswordActivity extends BaseActivity implements View.OnClick
         }
 
     }
-/**
-  *  描述：发送成功的UI更新
-  *  时间：2018/7/31 16:42
-  **/
+
+    /**
+     * 描述：发送成功的UI更新
+     * 时间：2018/7/31 16:42
+     **/
     private void updataUI() {
 
 
-        ToastUtils.showToast(getApplicationContext(),"发送成功！注意查收");
+        ToastUtils.showToast(getApplicationContext(), "发送成功！注意查收");
         forgetPswBt1.setEnabled(false);
-        new Thread(){
+        new Thread() {
             @Override
             public void run() {
-                for (int a=60;a>0;a--){
-                   final int b=a-1;
+                for (int a = 60; a > 0; a--) {
+                    final int b = a - 1;
                     try {
                         Thread.sleep(1000);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                if (b+1==1){
+                                if (b + 1 == 1) {
                                     forgetPswBt1.setText(getString(R.string.forget_bt1));
                                     forgetPswBt1.setEnabled(true);
 
-                                }else {
-                                    forgetPswBt1.setText(""+b);
+                                } else {
+                                    forgetPswBt1.setText("" + b);
                                 }
-
 
                             }
                         });

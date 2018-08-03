@@ -5,27 +5,40 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
 
+    android:background="#111723"
+
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
+        android:rotation="15"
         android:layout_centerInParent="true"
         android:id="@+id/main_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher_background" />
     <TextView
+
         android:layout_above="@id/main_pb_1"
         android:layout_centerHorizontal="true"
         android:text="@string/MainActivity_tv1"
         android:id="@+id/main_tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <ProgressBar
-        android:layout_alignParentBottom="true"
-        android:max="100"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:id="@+id/main_pb_1"
+    <!--<ProgressBar-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:max="100"-->
+        <!--style="@android:style/Widget.ProgressBar.Horizontal"-->
+        <!--android:id="@+id/main_pb_1"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp" />-->
+
+
+    <com.meiji.yangshijie.myapplication_test.View.ProgressSeek
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
+        android:layout_alignParentBottom="true"
+        android:id="@+id/main_pb_1"
+        android:layout_height="80dp" />
+
+
 </RelativeLayout>

@@ -6,9 +6,8 @@
     <uses-permission android:name="android.permission.access_wifi_state" />
     <uses-permission android:name="android.permission.access_network_state" />
 
-
-
     <application
+        android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,25 +15,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
         </activity>
         <activity android:name=".User_selectionActivity" />
         <activity android:name=".register.LoginActivity" />
         <activity android:name=".register.ForgetpasswordActivity" />
         <activity android:name=".register.RegisterActivity" />
-        <activity android:name=".register.AgreementActivity"></activity>
+        <activity android:name=".register.AgreementActivity" />
 
-        <service android:name=".SystemService">
+        <service android:name=".SystemService"></service>
 
-        </service>
+        <!-- 监听网络状态 -->
 
-        <!--监听网络状态   -->
-
-        <receiver android:name=".Receiver.NetworkConnectChangedReceiver" >
+        <receiver android:name=".Receiver.NetworkConnectChangedReceiver">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
                 <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
@@ -42,12 +41,15 @@
             </intent-filter>
         </receiver>
 
+        <!--测试Activity-->
+        <activity android:name=".test.TestDatabaseActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
     </application>
-
-
-
-
-
 
 </manifest>

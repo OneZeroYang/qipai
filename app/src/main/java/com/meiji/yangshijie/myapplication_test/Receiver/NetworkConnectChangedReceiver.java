@@ -10,17 +10,17 @@ import android.os.Parcelable;
 import android.util.Log;
 
 import com.meiji.yangshijie.myapplication_test.BaseActivity;
+import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
 
 /**
-  *  描述：监听广播
-  *  时间：2018/8/1 16:09
-  **/
+ * 描述：监听广播
+ * 时间：2018/8/1 16:09
+ **/
 
 public class NetworkConnectChangedReceiver extends BroadcastReceiver {
-
-
     private Context context;
+
     private String getConnectionType(int type) {
         String connType = "";
         if (type == ConnectivityManager.TYPE_MOBILE) {
@@ -33,7 +33,7 @@ public class NetworkConnectChangedReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        this.context=context;
+        this.context = context;
         if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(intent.getAction())) {// 监听wifi的打开与关闭，与wifi的连接无关
             int wifiState = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, 0);
             Log.e("TAG", "wifiState:" + wifiState);
@@ -59,9 +59,11 @@ public class NetworkConnectChangedReceiver extends BroadcastReceiver {
                 if (isConnected) {
                     //已经连上
 
+                    Variable.isNetwork = true;
+
 
                 } else {
-                  BaseActivity.NetworkErrorException();
+                    BaseActivity.NetworkErrorException();
                     //没有连上
                 }
             }

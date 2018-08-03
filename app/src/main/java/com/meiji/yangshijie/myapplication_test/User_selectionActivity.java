@@ -17,9 +17,6 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
     private Button loginBt1;
     private Button loginBt2;
 
-
-
-
     @Override
     protected int setView() {
         return R.layout.activity_user_selection;
@@ -32,16 +29,10 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
         loginBt2 = (Button) findViewById(R.id.login_bt2);
         loginBt1.setOnClickListener(this);
         loginBt2.setOnClickListener(this);
-
     }
 
     @Override
     protected void initData() {
-
-
-
-
-
 
     }
 
@@ -50,22 +41,22 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
 
     }
 
-
     /**
-      *  描述：点击事件
-      *  时间：2018/7/31 12:01
-      **/
+     * 描述：点击事件
+     * 时间：2018/7/31 12:01
+     **/
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.login_bt1:
-                ToastUtils.showToast(getApplicationContext(),getResources().getString(R.string.login));
+                ToastUtils.showToast(getApplicationContext(), getResources().getString(R.string.login));
                 startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 finish();
                 break;
             case R.id.login_bt2:
-                ToastUtils.showToast(getApplicationContext(),getResources().getString(R.string.register));
+                ToastUtils.showToast(getApplicationContext(), getResources().getString(R.string.register));
                 startActivity(new Intent(this, RegisterActivity.class));
+                finish();
                 break;
         }
     }
