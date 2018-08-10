@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".test.TestDatabaseActivity">
 
 
@@ -28,4 +29,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="查" />
+
+
+    <!--<com.meiji.yangshijie.myapplication_test.View.TestView-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="match_parent" />-->
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.meiji.ysj.youxidating.view.ShapeImageView
+        android:layout_width="150dp"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"
+        android:id="@+id/image1"
+        android:layout_height="250dp"
+        android:src="@mipmap/ic_1"
+        />
+    <com.meiji.ysj.youxidating.view.ShapeImageView
+        android:layout_width="150dp"
+        android:scaleType="fitXY"
+        android:layout_centerInParent="true"
+        android:id="@+id/image2"
+        android:layout_height="250dp"
+        android:src="@mipmap/ic_1"
+        />
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
 </LinearLayout>

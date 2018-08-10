@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:color="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -26,6 +26,35 @@
     <style name="login_Image">
         <item name="android:layout_width">50dp</item>
         <item name="android:layout_height">50dp</item>
+    </style>
+
+
+
+    <style name="dialog_style" parent="@android:style/Theme.Translucent.NoTitleBar">
+
+        <!--是否悬浮在activity上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--透明是否-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--activity的背景颜色（一定要设置成#00000000）-->
+        <item name="android:background">#00000000</item>
+        <!--没有标题-->
+        <item name="android:windowNoTitle">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--可以设置Activity的弹出和消失动画（可选）-->
+        <!--<item name="android:windowAnimationStyle">@style/animation_style</item>-->
+    </style>
+    
+    
+    
+    <style name="XX_1080X1920">
+        <item name="android:layout_marginTop">21dp</item>
+        <item name="android:layout_marginLeft">36dp</item>
+        <item name="android:layout_width">93dp</item>
+        <item name="android:layout_height">38dp</item>
+
     </style>
 
 </resources>

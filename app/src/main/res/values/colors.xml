@@ -17,6 +17,26 @@
     <color name="ddddddddd">#566eec</color>
 
 
-    <color name="textcolor">#859ccc</color>
+    <color name="textcolor">#61C1EA</color>
+
+
+    <color name="Progress1">#b97e32</color>
+
+    <color name="Progress2">#e19e51</color>
+
+    <color name="Progress3">#dfcf54</color>
+
+
+    <color name="Progress4">#ede655</color>
+
+
+    <color name="login">#1C769C</color>
+
+
+    <color name="personal_">#ABE0F1</color>
+
+
+
+
 
 </resources>

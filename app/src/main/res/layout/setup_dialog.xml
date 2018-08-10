@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bcg_setup_beijing"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_setup_xx"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="37dp"
+        android:layout_gravity="end"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:background="@mipmap/xx" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_marginLeft="-50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音乐开关"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp" />
+            <TextView
+                android:id="@+id/tv_setup_yingyue"
+                android:gravity="center"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp"
+                android:text=""
+                android:layout_marginLeft="80dp"
+                android:background="@mipmap/tv_setup_sehzhi"
+                android:layout_width="150dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv_setup_1"
+                android:layout_marginLeft="-155dp"
+                android:background="@mipmap/im_setup_kaiguan"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_marginLeft="-50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="振动开关"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp" />
+            <TextView
+                android:id="@+id/tv_setup_zhengdong"
+                android:gravity="center"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp"
+                android:text=""
+                android:layout_marginLeft="80dp"
+                android:background="@mipmap/tv_setup_sehzhi"
+                android:layout_width="150dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv_setup_2"
+                android:layout_marginLeft="-155dp"
+                android:background="@mipmap/im_setup_kaiguan"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <TextView
+                android:layout_marginLeft="-50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音效开关"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp" />
+            <TextView
+                android:id="@+id/tv_setupyingxiao"
+                android:gravity="center"
+                android:textColor="#6ECCF5"
+                android:textSize="25dp"
+                android:text=""
+                android:layout_marginLeft="80dp"
+                android:background="@mipmap/tv_setup_sehzhi"
+                android:layout_width="150dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv_setup_3"
+                android:layout_marginLeft="-155dp"
+                android:background="@mipmap/im_setup_kaiguan"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

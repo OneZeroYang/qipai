@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -22,6 +23,8 @@ import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
 import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 import com.meiji.yangshijie.myapplication_test.utils.Variable;
 
+import static com.meiji.ysj.youxidating.utils.FileUtils.TAG;
+
 /**
   *  描述：ACTIVITY的所有基类
   *  时间：2018/7/31 10:47
@@ -34,6 +37,7 @@ public abstract class BaseActivity extends Activity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//强制横屏
         requestWindowFeature(Window.FEATURE_NO_TITLE);// 隐藏标题
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);// 设置全屏
         super.onCreate(savedInstanceState);
@@ -49,6 +53,8 @@ public abstract class BaseActivity extends Activity {
         }
         this.context=this;
         Variable.isstarat=false;
+        initViews();
+        initData();
 
 
         init();
@@ -93,9 +99,8 @@ public abstract class BaseActivity extends Activity {
   **/
     private void init(){
 
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);//强制横屏
-        initViews();
-        initData();
+
+
     }
     protected abstract int setView();
     protected abstract void initViews();
@@ -142,7 +147,7 @@ public abstract class BaseActivity extends Activity {
             dialogUtil.ShowExitDialog();
         }
 
-        return super.onKeyDown(keyCode, event);
+        return false;
     }
     @Override
     protected void onRestart() {
@@ -150,5 +155,11 @@ public abstract class BaseActivity extends Activity {
             dialogUtil.DismissDialg();
         }
         super.onRestart();
+    }
+
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
     }
 }

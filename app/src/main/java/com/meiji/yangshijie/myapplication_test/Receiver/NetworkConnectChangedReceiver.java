@@ -81,6 +81,8 @@ public class NetworkConnectChangedReceiver extends BroadcastReceiver {
                         Log.i("TAG", getConnectionType(info.getType()) + "连上");
                     }
                 } else {
+
+                    BaseActivity.NetworkErrorException();
                     Log.i("TAG", getConnectionType(info.getType()) + "断开");
                 }
             }

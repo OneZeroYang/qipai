@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.meiji.ysj.youxidating.GameActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:id="@+id/image_tx"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+        <ImageView
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50px"
+            android:id="@+id/image_wifi"
+            android:layout_width="50px"
+            android:layout_height="50px"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+        <ImageView
+            android:id="@+id/image_dc"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="50px"
+            android:layout_toLeftOf="@id/image_wifi"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1"
+            android:layout_width="50px"
+            android:layout_height="50px" />
+
+
+        <LinearLayout
+            android:layout_marginRight="400px"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@id/image_dc"
+            android:orientation="horizontal"
+            android:layout_width="200px"
+            android:layout_height="50px">
+
+            <ImageView
+
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="50px"
+                android:layout_height="50px" />
+
+
+            <TextView
+                android:layout_gravity="center"
+                android:text="6600000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/image_tx"
+            android:text="拉丝知啦裤裆"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tv_name"
+            android:layout_below="@+id/tv_name"
+            android:text="ID:880088"
+            android:layout_alignLeft="@+id/tv_name" />
+
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:layout_alignParentBottom="true"
+            android:background="#ddd"
+            android:layout_width="1500px"
+            android:layout_height="50px"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativeLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:layout_marginTop="10dp"
+            android:id="@+id/icon_zldx"
+            android:layout_width="250dp"
+            android:layout_height="90dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:id="@+id/icon_dzyx"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/icon_zldx"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:rotation="358"
+            android:id="@+id/icon_cpyx"
+            android:layout_width="200dp"
+            android:layout_height="280dp"
+            android:layout_toLeftOf="@+id/icon_dzyx"
+            android:layout_toStartOf="@+id/icon_dzyx"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:rotation="358"
+            android:layout_marginTop="20dp"
+            android:id="@+id/icon_zrsx"
+            android:layout_width="180dp"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:rotation="2"
+            android:id="@+id/icon_tyss"
+            android:layout_width="200dp"
+            android:layout_height="280dp"
+            android:layout_toEndOf="@+id/icon_dzyx"
+            android:layout_toRightOf="@+id/icon_dzyx"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1" />
+
+
+        <com.meiji.ysj.youxidating.view.ShapeImageView
+            android:rotation="2"
+            android:layout_marginTop="20dp"
+            android:id="@+id/icon_qpyx"
+            android:layout_width="180dp"
+            android:layout_height="250dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <FrameLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/linearlayout1"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.meiji.ysj.youxidating.view.ReflectionImage
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:text="消息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="180dp"
+            android:layout_width="60dp"
+            android:layout_height="80dp"
+            android:layout_toRightOf="@id/linearlayout1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.meiji.ysj.youxidating.view.ReflectionImage
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:text="个人中心"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="180dp"
+            android:layout_marginTop="15dp"
+            android:layout_toLeftOf="@id/linearlayout1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.meiji.ysj.youxidating.view.ReflectionImage
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="设置" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

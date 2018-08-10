@@ -25,7 +25,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-
     implementation 'org.litepal.android:core:1.5.0'//数据库框架----LitePal
+    implementation 'com.zhy:okhttputils:2.6.2'//网络请求框架
+    implementation 'com.google.code.gson:gson:2.8.5'//数据解析框架
+    implementation 'com.alibaba:fastjson:1.1.68.android'//
+    implementation 'com.android.support:recyclerview-v7:27.1.1'//recyclerview函数库
+
 }

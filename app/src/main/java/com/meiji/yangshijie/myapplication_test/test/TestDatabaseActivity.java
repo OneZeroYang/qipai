@@ -2,20 +2,14 @@ package com.meiji.yangshijie.myapplication_test.test;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.View.DialogView;
 import com.meiji.yangshijie.myapplication_test.View.Dialoglogin;
-import com.meiji.yangshijie.myapplication_test.db.UserData;
-import com.meiji.yangshijie.myapplication_test.db.UserdbUtils;
-import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
-
-import java.util.List;
+import com.meiji.ysj.youxidating.view.ParallelogramShape;
+import com.meiji.ysj.youxidating.view.ShapeImageView;
 
 
 /**
@@ -26,10 +20,31 @@ public class TestDatabaseActivity extends AppCompatActivity {
 
     DialogView dialogView=null;
 
+    private ShapeImageView shapeImageView1;
+    private ShapeImageView shapeImageView2;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_database);
+        shapeImageView1=findViewById(R.id.image1);
+        shapeImageView2=findViewById(R.id.image2);
+        //创建一个平行四边形的shape
+        ParallelogramShape shape = new ParallelogramShape();
+        shape.setScale(1);
+        ((ShapeImageView) findViewById(R.id.image1)).setShap(shape);
+
+
+
+
+        ParallelogramShape shape1 = new ParallelogramShape();
+        shape1.setScale(2);
+        ((ShapeImageView) findViewById(R.id.image2)).setShap(shape1);
+
+
+
     }
 
     public void test(View view) {
@@ -50,7 +65,7 @@ public class TestDatabaseActivity extends AppCompatActivity {
 //                dialogView=new DialogView(TestDatabaseActivity.this) {
 //                    @Override
 //                    protected View getView(LayoutInflater inflater) {
-//                        View inflate = inflater.inflate(R.layout.dialog_view, null);
+//                        View inflate = inflater.inflate(R.layout.dialog_login, null);
 //                       // Button button1=inflate.findViewById(R.id.button1);
 //                        Button button2=inflate.findViewById(R.id.button_1);
 ////                        button1.setOnClickListener(new View.OnClickListener() {

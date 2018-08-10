@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@mipmap/login_background"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:textColor="@color/textcolor"
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="开户条约"
+            android:textSize="35sp" />
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_below="@id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+            <TextView
+                android:paddingTop="10dp"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:textColor="@color/textcolor"
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_1"
+
+                android:textSize="25sp"
+                android:text="  和线性布局(LinearLayout)一样,RelaiveLayout相对布局也是我们用的比较多的一个布局之一。相对,顾名思义是有参照的,就是以某个兄弟组件,或者父容器来决定的（兄弟组件是在一个同一个布局里面的组件,如果是布局里一个组件参照另一个布局里的组件会出错）。合理地利用好LinearLayout的weight权重属性和RelativeLayout相 对布局,可以解决屏幕分辨率不同的自适应问题。" />
+
+
+
+        </ScrollView>
+
+
+        <Button
+
+            android:id="@+id/bt_treaty_queding"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/scrollView"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/ic_queding" />
+
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/im_treaty_xx"
+        android:layout_width="113dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/xx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</android.support.constraint.ConstraintLayout>

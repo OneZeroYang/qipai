@@ -5,11 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@mipmap/ic_background"
     tools:context=".User_selectionActivity">
 
     <ImageView
         android:paddingBottom="0dp"
-        android:src="@drawable/ic_launcher_background"
+        android:src="@mipmap/log"
         android:layout_centerInParent="true"
         android:id="@+id/login_log"
         android:layout_width="wrap_content"
@@ -24,13 +25,13 @@
        android:layout_width="match_parent"
        android:layout_height="100dp">
        <Button
-           android:text="@string/login"
+           android:background="@mipmap/ic_login"
            android:id="@+id/login_bt1"
            android:layout_weight="0"
            android:layout_width="150dp"
            android:layout_height="match_parent" />
        <Button
-           android:text="@string/register"
+           android:background="@mipmap/ic_register"
            android:id="@+id/login_bt2"
            android:layout_marginStart="150dp"
            android:layout_weight="0"

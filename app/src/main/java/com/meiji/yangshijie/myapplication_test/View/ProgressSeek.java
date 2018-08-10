@@ -82,7 +82,7 @@ public class ProgressSeek extends View {
      * 渐变颜色数组
      */
 
-    int [] color={Color.parseColor("#192149"),Color.parseColor("#4f5da3"),Color.parseColor("#95a4f1"),Color.parseColor("#566eec"),};
+    int [] color={Color.parseColor("#b97e32"),Color.parseColor("#e19e51"),Color.parseColor("#dfcf54"),Color.parseColor("#ede655"),};
 
     /**
      * 缓存图片
@@ -111,7 +111,7 @@ public class ProgressSeek extends View {
         this.context = context;
 
 
-        bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+        bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_guangdian);
         bitmapWidth = bitmap.getWidth();
         bitmapHeight = bitmap.getHeight();
 
@@ -211,12 +211,13 @@ public class ProgressSeek extends View {
         }
 
         view_edge_width = this.getWidth();
-        Log.i("打出来看看控件的宽度:", view_edge_width + "");
+      //  Log.i("打出来看看控件的宽度:", view_edge_width + "");
 
         init(progress);
 
 
     }
+
 
 
 }

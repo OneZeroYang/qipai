@@ -2,6 +2,7 @@ package com.meiji.yangshijie.myapplication_test.View;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -22,6 +23,7 @@ public abstract class DialogView {
     public  DialogView(Context context){
         this.context=context;
         dialog=new AlertDialog.Builder(context);
+
         initView();
     }
 

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@mipmap/login_background"
+    android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/ed_register_name"
+            android:textColorHint="@color/login"
+            android:layout_marginTop="10dp"
+            android:hint="请输入手机号"
+            android:gravity="center"
+            android:background="@mipmap/user_name"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+
+
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/ed_register_password"
+            android:textColorHint="@color/login"
+            android:layout_marginTop="5dp"
+            android:hint="请输入密码"
+            android:gravity="center"
+            android:background="@mipmap/user_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:inputType="textPassword"
+            android:id="@+id/ed_register_password1"
+            android:textColorHint="@color/login"
+            android:layout_marginTop="5dp"
+            android:hint="请确认密码"
+            android:gravity="center"
+            android:background="@mipmap/user_password"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+        <EditText
+            android:id="@+id/ed_register_daili"
+            android:textColorHint="@color/login"
+            android:layout_marginTop="5dp"
+            android:hint="代理邀请码"
+            android:gravity="center"
+            android:background="@mipmap/ic_dailiyaoqingma"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+        
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="250dp"
+            android:layout_height="50dp">
+
+
+            <EditText
+                android:id="@+id/ed_register_yzm"
+                android:textColorHint="@color/login"
+                android:gravity="center"
+                android:hint="请输入验证码"
+                android:background="@mipmap/ic_yzm"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <TextView
+                android:id="@+id/tv_register_send"
+                android:textColor="@color/textcolor"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:text="发送"
+                android:background="@mipmap/ic_yzm"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="250dp"
+            android:layout_height="40dp">
+            <CheckBox
+                android:id="@+id/ck_register_ck"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+
+            <TextView
+                android:id="@+id/tv_register_kaihutiaoyue"
+                android:textColor="@color/textcolor"
+
+                android:text="开户条约"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_register_gologin"
+                android:textColor="@color/textcolor"
+                android:layout_marginLeft="120dp"
+                android:text="去登陆"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_register_register"
+            android:background="@mipmap/bt_redister"
+            android:layout_width="250dp"
+            android:layout_height="50dp" />
+
+        
+
+
+
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_register_xx"
+        android:layout_width="113dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/xx"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@mipmap/bag_perfect_bingjing"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/bt_perfect_xx"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="37dp"
+        android:layout_gravity="end"
+        android:layout_width="93dp"
+        android:layout_height="38dp"
+        android:background="@mipmap/xx" />
+
+    <ScrollView
+        android:layout_marginBottom="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="真实姓名："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ed_perfect_name"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="身份证号："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ed_perfect_id"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="银行卡号："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ed_perfect_kahao"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+
+                <ImageView
+                    android:id="@+id/im_perfect_yinghangtubiao"
+                    android:src="@mipmap/ic_perfect_xiala"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_perfect_yinghang"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="中国银行："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+
+                <ImageView
+                    android:id="@+id/im_perfect_xiala"
+                    android:src="@mipmap/ic_perfect_xiala"
+                    android:layout_marginLeft="150dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="开户银行："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ed_perfect_kaihuyinghang"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:background="@mipmap/ed_perfect_beijing"
+                android:orientation="horizontal"
+                android:layout_width="300dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#83A8C3"
+                    android:text="开户行市："
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <EditText
+                    android:id="@+id/ed_perfect_kaihushi"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_perfect_queding"
+        android:layout_gravity="center"
+        android:layout_marginTop="-100dp"
+        android:background="@mipmap/bt_perfect_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</LinearLayout>

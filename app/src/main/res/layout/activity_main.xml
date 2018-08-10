@@ -5,26 +5,28 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
 
-    android:background="#111723"
+    android:background="@mipmap/ic_background"
 
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
-        android:rotation="15"
+
         android:layout_centerInParent="true"
         android:id="@+id/main_log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_background" />
-    <TextView
+        android:src="@mipmap/log" />
 
-        android:layout_above="@id/main_pb_1"
-        android:layout_centerHorizontal="true"
-        android:text="@string/MainActivity_tv1"
+    <TextView
+        android:textColor="#fff"
         android:id="@+id/main_tv_1"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="52dp"
+        android:text="loading..." />
     <!--<ProgressBar-->
         <!--android:layout_alignParentBottom="true"-->
         <!--android:max="100"-->
@@ -35,6 +37,7 @@
 
 
     <com.meiji.yangshijie.myapplication_test.View.ProgressSeek
+
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:id="@+id/main_pb_1"

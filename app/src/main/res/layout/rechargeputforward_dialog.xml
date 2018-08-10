@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/gerenzhongxing_beijing"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="85dp">
+        <Button
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/bt_recharge_xx"
+            android:background="@mipmap/rechargr_back"
+            android:layout_width="90dp"
+            android:layout_height="37dp" />
+
+
+
+
+        <TextView
+            android:text="888888888"
+            android:gravity="center"
+            android:id="@+id/tv_recharge_jingbi"
+            android:layout_marginLeft="70dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/bt_recharge_xx"
+            android:background="@mipmap/recharge_jingbi"
+            android:layout_width="180dp"
+            android:layout_height="25dp" />
+
+        <Button
+            android:id="@+id/bt_recharge_tixian"
+            android:layout_marginLeft="150dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tv_recharge_jingbi"
+            android:background="@mipmap/recharge_tixian"
+            android:layout_width="180dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/ed_recharge_ed"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:hint="请输入充值金额"
+                android:gravity="center"
+                android:background="@mipmap/recharge_ed_"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+
+            <TextView
+                android:paddingLeft="25dp"
+                android:textSize="20sp"
+                android:text="微信充值"
+                android:gravity="center"
+                android:id="@+id/tv_recharge_weixing"
+                android:background="@mipmap/recharge_weixing"
+                android:layout_marginTop="25dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/ed_recharge_ed"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+
+
+            <TextView
+                android:paddingLeft="25dp"
+                android:textSize="20sp"
+                android:text="支付宝充值"
+                android:gravity="center"
+                android:id="@+id/tv_recharge_zhifubao"
+                android:background="@mipmap/recharge_zhifubao"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_recharge_weixing"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+
+
+            <TextView
+                android:paddingLeft="25dp"
+                android:textSize="20sp"
+                android:text="银行卡充值"
+                android:gravity="center"
+                android:id="@+id/tv_recharge_yinghangka"
+                android:background="@mipmap/recharge_yinghangka"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tv_recharge_zhifubao"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</LinearLayout>
