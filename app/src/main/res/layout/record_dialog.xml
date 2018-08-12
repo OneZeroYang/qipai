@@ -5,47 +5,15 @@
     android:background="@mipmap/bcg_record_chongzhijilu"
     android:layout_height="match_parent">
 
-    <Button
-        style="@style/XX_1080X1920"
+    <ImageView
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/bt_record_xx"
         android:background="@mipmap/ic_geren_xx" />
 
-    <RelativeLayout
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="35dp"
-        android:layout_marginTop="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="85dp">
 
-
-
-
-
-
-
-
-    </RelativeLayout>
-
-    <RelativeLayout
-
-        android:layout_marginBottom="50dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginLeft="70dp"
-        android:layout_marginTop="25dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-
-        <TextView
-            android:textSize="25sp"
-            android:text="暂无记录"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-
-    </RelativeLayout>
 
 
 

@@ -19,7 +19,7 @@ import com.meiji.ysj.youxidating.utils.DialogUtils;
   **/
 
 public class PerfectDialog extends BaesDialog implements View.OnClickListener {
-    private Button btPerfectXx;
+    private ImageView btPerfectXx;
     private EditText edPerfectName;
     private EditText edPerfectId;
     private EditText edPerfectKahao;
@@ -53,11 +53,11 @@ public class PerfectDialog extends BaesDialog implements View.OnClickListener {
     @Override
     protected void init() {
 
-        btPerfectXx = (Button) findViewById(R.id.bt_perfect_xx);//关闭
+        btPerfectXx = (ImageView) findViewById(R.id.bt_perfect_xx);//关闭
         edPerfectName = (EditText) findViewById(R.id.ed_perfect_name);//真实姓名
         edPerfectId = (EditText) findViewById(R.id.ed_perfect_id);//身份证号
         edPerfectKahao = (EditText) findViewById(R.id.ed_perfect_kahao);//银行卡号
-        imPerfectYinghangtubiao = (ImageView) findViewById(R.id.im_perfect_yinghangtubiao);//银行图标
+        //imPerfectYinghangtubiao = (ImageView) findViewById(R.id.im_perfect_yinghangtubiao);//银行图标
         tvPerfectYinghang = (TextView) findViewById(R.id.tv_perfect_yinghang);//那个银行
         imPerfectXiala = (ImageView) findViewById(R.id.im_perfect_xiala);//下拉按钮
         edPerfectKaihuyinghang = (EditText) findViewById(R.id.ed_perfect_kaihuyinghang);//开户银行

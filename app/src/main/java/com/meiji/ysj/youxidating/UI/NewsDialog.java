@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.View.BaesDialog;
@@ -19,7 +20,7 @@ import com.meiji.ysj.youxidating.utils.DialogUtils;
   **/
 
 public class NewsDialog extends BaesDialog implements View.OnClickListener {
-    private Button btNewsXx;
+    private ImageView btNewsXx;
     private RecyclerView rlvNewsList;
     private RecyclerViewAdapter adapter;
 
@@ -48,7 +49,7 @@ public class NewsDialog extends BaesDialog implements View.OnClickListener {
 
     @Override
     protected void init() {
-        btNewsXx = (Button) findViewById(R.id.bt_news_xx);
+        btNewsXx = (ImageView) findViewById(R.id.bt_news_xx);
         btNewsXx.setOnClickListener(this);
         rlvNewsList = (RecyclerView) findViewById(R.id.rlv_news_list);
 //        adapter=new RecyclerViewAdapter(context,0) {

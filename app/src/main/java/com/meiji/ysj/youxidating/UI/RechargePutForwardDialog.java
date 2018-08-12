@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
@@ -19,9 +20,9 @@ import com.meiji.yangshijie.myapplication_test.View.BaesDialog;
   **/
 public class RechargePutForwardDialog extends BaesDialog implements View.OnClickListener {
 
-    private Button btRechargeXx;
+    private ImageView btRechargeXx;
     private TextView tvRechargeJingbi;
-    private Button btRechargeTixian;
+    private ImageView btRechargeTixian;
     private EditText edRechargeEd;
     private TextView tvRechargeWeixing;
     private TextView tvRechargeZhifubao;
@@ -51,9 +52,9 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
     @Override
     protected void init() {
 
-        btRechargeXx = (Button) findViewById(R.id.bt_recharge_xx);//关闭
+        btRechargeXx = (ImageView) findViewById(R.id.bt_recharge_xx);//关闭
         tvRechargeJingbi = (TextView) findViewById(R.id.tv_recharge_jingbi);//金币
-        btRechargeTixian = (Button) findViewById(R.id.bt_recharge_tixian);//提现
+        btRechargeTixian = (ImageView) findViewById(R.id.bt_recharge_tixian);//提现
         edRechargeEd = (EditText) findViewById(R.id.ed_recharge_ed);//输入的充值金额
         tvRechargeWeixing = (TextView) findViewById(R.id.tv_recharge_weixing);//微信充值
         tvRechargeZhifubao = (TextView) findViewById(R.id.tv_recharge_zhifubao);//支付宝充值

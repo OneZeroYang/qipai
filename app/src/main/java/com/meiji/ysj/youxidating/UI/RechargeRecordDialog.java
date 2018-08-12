@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.View.BaesDialog;
@@ -18,7 +19,7 @@ import com.meiji.ysj.youxidating.utils.DialogUtils;
   **/
 public class RechargeRecordDialog extends BaesDialog implements View.OnClickListener {
 
-    private Button btRecordXx;
+    private ImageView btRecordXx;
 
 
     private Context context;
@@ -43,7 +44,7 @@ public class RechargeRecordDialog extends BaesDialog implements View.OnClickList
     @Override
     protected void init() {
 
-        btRecordXx = (Button) findViewById(R.id.bt_record_xx);
+        btRecordXx = (ImageView) findViewById(R.id.bt_record_xx);
         btRecordXx.setOnClickListener(this);
 
     }

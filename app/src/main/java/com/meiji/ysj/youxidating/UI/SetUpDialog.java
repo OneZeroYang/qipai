@@ -12,6 +12,7 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
@@ -26,7 +27,7 @@ import com.meiji.ysj.youxidating.utils.DialogUtils;
 public class SetUpDialog extends BaesDialog implements View.OnClickListener {
     private static final String TAG = "SetUpDialog";
     private Context context;
-    private Button bt_setup_xx;
+    private ImageView bt_setup_xx;
     private TextView tvSetupYingyue;
     private TextView tvSetupZhengdong;
     private TextView tvSetupyingxiao;
@@ -96,7 +97,7 @@ public class SetUpDialog extends BaesDialog implements View.OnClickListener {
         tvSetupyingxiao.setOnClickListener(this);
 
 
-        animation = new TranslateAnimation(0,200,0,0);//设置动画
+        animation = new TranslateAnimation(0,130,0,0);//设置动画
 
         animation1=new TranslateAnimation(0,0,0,0);//设置动画
 

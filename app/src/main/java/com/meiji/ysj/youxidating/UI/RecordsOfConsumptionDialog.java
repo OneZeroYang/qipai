@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.View.BaesDialog;
@@ -18,7 +19,7 @@ import com.meiji.ysj.youxidating.utils.DialogUtils;
   **/
 public class RecordsOfConsumptionDialog extends BaesDialog {
     private Context context;
-    private Button btRecordosfconsumptionXx;
+    private ImageView btRecordosfconsumptionXx;
 
 
     public RecordsOfConsumptionDialog(@NonNull Context context) {
@@ -41,7 +42,7 @@ public class RecordsOfConsumptionDialog extends BaesDialog {
 
     @Override
     protected void init() {
-        btRecordosfconsumptionXx = (Button) findViewById(R.id.bt_recordosfconsumption_xx);
+        btRecordosfconsumptionXx = (ImageView) findViewById(R.id.bt_recordosfconsumption_xx);
         btRecordosfconsumptionXx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

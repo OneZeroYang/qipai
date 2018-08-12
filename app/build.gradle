@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 'android-P'
     defaultConfig {
         applicationId "com.meiji.yangshijie.myapplication_test"
         minSdkVersion 15
@@ -16,19 +16,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:27.0.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'org.litepal.android:core:1.5.0'//数据库框架----LitePal
-    implementation 'com.zhy:okhttputils:2.6.2'//网络请求框架
-    implementation 'com.google.code.gson:gson:2.8.5'//数据解析框架
-    implementation 'com.alibaba:fastjson:1.1.68.android'//
-    implementation 'com.android.support:recyclerview-v7:27.1.1'//recyclerview函数库
-
+    implementation 'org.litepal.android:core:1.5.0'
+    //数据库框架----LitePal
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //网络请求框架
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //数据解析框架
+    implementation 'com.alibaba:fastjson:1.1.68.android'
+    //
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //recyclerview函数库
 }

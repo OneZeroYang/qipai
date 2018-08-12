@@ -5,17 +5,17 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <Button
+    <ImageView
         android:id="@+id/bt_perfect_xx"
-        android:layout_marginTop="22dp"
-        android:layout_marginRight="37dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="end"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
         android:background="@mipmap/xx" />
 
     <ScrollView
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="70dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
         android:layout_marginTop="25dp"
@@ -28,13 +28,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
-                android:gravity="center"
-                android:layout_marginTop="25dp"
+
+                android:layout_marginTop="15dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
+
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
                     android:text="真实姓名："
@@ -49,12 +50,12 @@
 
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
+
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
@@ -70,12 +71,12 @@
 
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
+
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
@@ -91,19 +92,19 @@
 
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="234dp"
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/im_perfect_yinghangtubiao"
-                    android:src="@mipmap/ic_perfect_xiala"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                <!--<ImageView-->
+                    <!--android:id="@+id/im_perfect_yinghangtubiao"-->
+                    <!--android:src="@mipmap/ic_perfect_xiala"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content" />-->
                 <TextView
+                    android:layout_gravity="center"
                     android:id="@+id/tv_perfect_yinghang"
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
@@ -114,20 +115,22 @@
 
 
                 <ImageView
+
+                    android:layout_gravity="center"
                     android:id="@+id/im_perfect_xiala"
                     android:src="@mipmap/ic_perfect_xiala"
-                    android:layout_marginLeft="150dp"
+                    android:layout_marginLeft="130dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
+
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
@@ -143,12 +146,12 @@
 
             </LinearLayout>
             <LinearLayout
-                android:gravity="center"
+
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
-                android:layout_width="300dp"
-                android:layout_height="40dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
@@ -172,11 +175,11 @@
 
     <Button
         android:id="@+id/bt_perfect_queding"
-        android:layout_gravity="center"
-        android:layout_marginTop="-100dp"
-        android:background="@mipmap/bt_perfect_"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-70dp"
+        android:background="@mipmap/bt_perfect_" />
 
 
 

@@ -5,8 +5,12 @@
     android:background="@mipmap/bcg_geren_xiaofeijilu"
     android:layout_height="match_parent">
 
-    <Button
-        style="@style/XX_1080X1920"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15sp"
+
         android:id="@+id/bt_recordosfconsumption_xx"
         android:background="@mipmap/ic_geren_xx" />
 

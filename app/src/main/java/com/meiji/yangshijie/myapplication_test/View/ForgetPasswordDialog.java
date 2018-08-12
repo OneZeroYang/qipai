@@ -72,8 +72,8 @@ public class ForgetPasswordDialog extends Dialog implements View.OnClickListener
 
         Window window = getWindow();
         WindowManager.LayoutParams layoutParams = window.getAttributes(); //获取当前对话框的参数值
-        layoutParams.width = (int) (point.x * 0.8); //宽度设置为屏幕宽度的0.5
-        layoutParams.height = (int) (point.y * 0.8); //高度设置为屏幕高度的0.5
+        layoutParams.width = (int) (point.x * 0.9); //宽度设置为屏幕宽度的0.5
+        layoutParams.height = (int) (point.y * 0.9); //高度设置为屏幕高度的0.5
 //        layoutParams.width = (int) (display.getWidth() * 0.5);
 //        layoutParams.height = (int) (display.getHeight() * 0.5);
         window.setAttributes(layoutParams);

@@ -5,13 +5,13 @@
     android:background="@mipmap/bcg_news_beijing"
     android:layout_height="match_parent">
 
-    <Button
+    <ImageView
         android:id="@+id/bt_news_xx"
-        android:layout_marginTop="22dp"
-        android:layout_marginRight="37dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
         android:layout_gravity="end"
-        android:layout_width="93dp"
-        android:layout_height="38dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:background="@mipmap/xx" />
 
     <LinearLayout

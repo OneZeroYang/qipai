@@ -11,6 +11,14 @@ import android.widget.ImageView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 
+/**
+ *  @ 作用： 开户条约
+ *
+ *  @ 时间： 2018/8/12 13:54
+ */
+
+
+
 public class TreatyDialog extends BaesDialog implements View.OnClickListener {
 
     private Button btTreatyQueding;
