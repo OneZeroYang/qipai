@@ -5,6 +5,8 @@ import android.content.Context;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.Display;
@@ -17,6 +19,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.myapplication_test.utils.MsgUtils;
+import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 
 /**
   *  描述：忘记密码对话框
@@ -36,6 +40,28 @@ public class ForgetPasswordDialog extends Dialog implements View.OnClickListener
     private TextView tvForgetZaixiankefu;
     private Button btForgetRegister;
     private ImageView imForgetXx;
+
+
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    tvForgetGetyzm.setText((int)msg.obj+"");
+                    tvForgetGetyzm.setEnabled(false);
+                    break;
+                case 2:
+                    tvForgetGetyzm.setText("获取验证码");
+                    tvForgetGetyzm.setEnabled(true);
+                    break;
+                case 3:
+                    ProgressDialog.Stop();
+                    ToastUtils.showToast(context,"发送成功，请注意查收！");
+                    break;
+            }
+        }
+    };
+
 
     public ForgetPasswordDialog(@NonNull Context context) {
         super(context);
@@ -152,6 +178,26 @@ public class ForgetPasswordDialog extends Dialog implements View.OnClickListener
   *  时间：2018/8/8 17:18
   **/
     private void send() {
+
+        ProgressDialog.Show(context);
+        new Thread(){
+            @Override
+            public void run() {
+                for (int a=60;a>0;a--){
+                    try {
+                        Thread.sleep(1000);
+                        if (a==60){
+                            handler.sendMessage(MsgUtils.getmsg(3,null));
+                        }
+
+                        handler.sendMessage(MsgUtils.getmsg(1,a));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                handler.sendMessage(MsgUtils.getmsg(2,null));
+            }
+        }.start();
 
     }
 

@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@mipmap/game_bingjng1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,14 +26,16 @@
             android:background="@mipmap/game_touxiang">
 
             <ImageView
+                android:src="@mipmap/touxiang"
                 android:id="@+id/game_im_touxiang"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="5dp" />
 
         </LinearLayout>
 
         <TextView
+
             android:textSize="10dp"
             android:id="@+id/game_tv_name"
             android:layout_width="wrap_content"
@@ -52,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/game_tv_name"
             android:layout_marginLeft="1dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/game_layout1"
             android:text="ID:888666"
             android:textColor="#fff"
@@ -78,22 +80,28 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="52dp"
         android:background="@mipmap/game_xiaoxitongzhi"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+
+        <TextView
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:layout_marginRight="30dp"
+            android:id="@+id/game_tv_donggao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null" />
         <ImageView
+           android:layout_marginLeft="-25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/game_gonggao" />
-
-        <TextView
-            android:id="@+id/game_tv_donggao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null" />
 
 
     </LinearLayout>
@@ -118,12 +126,14 @@
             android:background="@mipmap/game_z1">
 
             <TextView
+                android:textColor="#FDD481"
+                android:layout_marginTop="15dp"
                 android:id="@+id/game_tv_gonggao1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="15dp"
-                android:text="公告" />
+                android:text="申请成为代理送金币" />
         </FrameLayout>
 
         <FrameLayout
@@ -139,25 +149,28 @@
             android:id="@+id/game_im_l2"
             android:layout_width="140dp"
             android:layout_height="190dp"
-            android:layout_marginRight="-15dp"
+            android:layout_marginLeft="-50dp"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@id/game_im_z2"
             android:background="@mipmap/game_l2" />
 
         <FrameLayout
+           android:layout_marginLeft="-50dp"
             android:id="@+id/game_im_l1"
             android:layout_width="140dp"
             android:layout_height="185dp"
-            android:layout_marginRight="-50dp"
+
             android:layout_marginTop="40dp"
             android:layout_toLeftOf="@id/game_im_l2"
             android:background="@mipmap/game_l1" />
 
         <FrameLayout
+            android:layout_marginRight="-50dp"
             android:id="@+id/game_im_r1"
             android:layout_width="140dp"
             android:layout_height="190dp"
-            android:layout_marginLeft="-15dp"
+            android:layout_marginLeft="35dp"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/game_im_z2"
             android:background="@mipmap/game_r1">
@@ -169,7 +182,8 @@
             android:id="@+id/game_im_r2"
             android:layout_width="140dp"
             android:layout_height="185dp"
-            android:layout_marginLeft="-50dp"
+            android:layout_marginRight="-50dp"
+
             android:layout_marginTop="40dp"
             android:layout_toRightOf="@id/game_im_r1"
             android:background="@mipmap/game_r2">
@@ -193,7 +207,16 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="-50dp"
             android:background="@mipmap/game_xiaoxi"
-            android:orientation="horizontal" />
+            android:orientation="horizontal" >
+            <TextView
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="消息"
+                android:textColor="#EECE83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/game_ll_gerenzhongxing"
@@ -204,7 +227,17 @@
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@id/game_ll_xiaoxi"
             android:background="@mipmap/game_gerenzhongxing"
-            android:orientation="horizontal" />
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:textSize="8dp"
+                android:layout_gravity="center"
+               android:text="个人中心"
+                android:textColor="#EECE83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/game_ll_sehzhi"
@@ -215,7 +248,16 @@
             android:layout_marginTop="15dp"
             android:layout_toLeftOf="@id/game_ll_xiaoxi"
             android:background="@mipmap/game_shezhi"
-            android:orientation="horizontal" />
+            android:orientation="horizontal" >
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:textSize="10dp"
+                android:layout_gravity="center"
+                android:text="设置"
+                android:textColor="#EECE83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
 
 
     </RelativeLayout>

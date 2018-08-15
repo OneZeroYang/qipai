@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.View.BaesDialog;
+import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
 
 /**
   *  描述：充值提现
@@ -83,12 +84,16 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
                 this.dismiss();
                 break;
             case R.id.bt_recharge_tixian://提现
+                ToastUtils.showToast(context,"请先完善个人信息！");
                 break;
             case R.id.tv_recharge_weixing://微信充值
+                ToastUtils.showToast(context,"暂未开通！");
                 break;
             case R.id.tv_recharge_zhifubao://支付宝充值
+                ToastUtils.showToast(context,"暂未开通！");
                 break;
             case R.id.tv_recharge_yinghangka://银行卡充值
+                ToastUtils.showToast(context,"暂未开通！");
                 break;
         }
     }

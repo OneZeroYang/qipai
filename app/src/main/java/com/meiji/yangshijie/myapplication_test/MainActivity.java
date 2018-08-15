@@ -54,7 +54,7 @@ public class MainActivity extends BaseActivity {
 
     private static Context context;
 
-    public static Activity activity;
+    public Activity activity=MainActivity.this;
 
 
 

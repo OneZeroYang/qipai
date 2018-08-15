@@ -2,8 +2,11 @@ package com.meiji.yangshijie.myapplication_test.View;
 
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -14,6 +17,10 @@ import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.User_selectionActivity;
+import com.meiji.yangshijie.myapplication_test.utils.MsgUtils;
+import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
+
+import static com.meiji.ysj.youxidating.utils.FileUtils.TAG;
 
 
 /**
@@ -36,6 +43,26 @@ public class RegisterDialog extends BaesDialog implements View.OnClickListener {
     private TextView tvRegisterGologin;
     private Button btRegisterRegister;
     private ImageView imRegisterXx;
+
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    tvRegisterSend.setText((int)msg.obj+"");
+                    tvRegisterSend.setEnabled(false);
+                    break;
+                case 2:
+                    tvRegisterSend.setText("发送");
+                    tvRegisterSend.setEnabled(true);
+                    break;
+                case 3:
+                    ProgressDialog.Stop();
+                    ToastUtils.showToast(context,"发送成功，请注意查收！");
+                    break;
+            }
+        }
+    };
 
 
     public RegisterDialog(@NonNull Context context) {
@@ -86,7 +113,18 @@ public class RegisterDialog extends BaesDialog implements View.OnClickListener {
                 this.dismiss();
                 break;
             case R.id.tv_register_send://发送验证码
-                send();
+                if (edRegisterName.getText().toString().equals("")){
+                    ToastUtils.showToast(context,"手机号不能为空！");
+                    return;
+                }
+                String s = tvRegisterSend.getText().toString();
+                if (s.equals("发送")){
+                    send();
+                }else {
+                    Log.i(TAG, "onClick: "+"发送太频繁");
+                    ToastUtils.showToast(context,"发送太频繁");
+                }
+
                 break;
             case R.id.tv_register_kaihutiaoyue://开户条约
                 ShowTreatyDialog();
@@ -137,6 +175,25 @@ public class RegisterDialog extends BaesDialog implements View.OnClickListener {
       *  时间：2018/8/8 16:46
       **/
     private void send() {
+        ProgressDialog.Show(context);
+        new Thread(){
+            @Override
+            public void run() {
+                for (int a=60;a>0;a--){
+                    try {
+                        Thread.sleep(1000);
+                        if (a==60){
+                            handler.sendMessage(MsgUtils.getmsg(3,null));
+                        }
+
+                        handler.sendMessage(MsgUtils.getmsg(1,a));
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                handler.sendMessage(MsgUtils.getmsg(2,null));
+            }
+        }.start();
 
     }
 }

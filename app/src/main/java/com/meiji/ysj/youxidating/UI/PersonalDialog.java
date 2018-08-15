@@ -1,5 +1,6 @@
 package com.meiji.ysj.youxidating.UI;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
@@ -35,6 +36,7 @@ public class PersonalDialog extends BaesDialog implements View.OnClickListener {
     private TextView tvPersonalChongzhijilu;
     private TextView tvPersonalXiaofeijilu;
     private Button tbPersonalBtdaili;
+    private static Activity activity;
 
 
     public PersonalDialog(@NonNull Context context) {
@@ -87,7 +89,8 @@ public class PersonalDialog extends BaesDialog implements View.OnClickListener {
       *  描述：开始显示
       *  时间：2018/8/9 14:57
       **/
-    public static void Show(Context context){
+    public static void Show(Context context, Activity activity){
+        PersonalDialog.activity=activity;
         PersonalDialog personalDialog=new PersonalDialog(context);
         personalDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         personalDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
@@ -117,6 +120,7 @@ public class PersonalDialog extends BaesDialog implements View.OnClickListener {
                 RecordsOfConsumptionDialog.Show(context);
                 break;
             case R.id.tb_personal_btdaili://申请代理
+                AgentDialog.Show(context,activity);
                 break;
         }
 

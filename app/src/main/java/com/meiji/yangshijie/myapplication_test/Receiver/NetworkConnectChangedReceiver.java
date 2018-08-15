@@ -63,7 +63,7 @@ public class NetworkConnectChangedReceiver extends BroadcastReceiver {
 
 
                 } else {
-                    BaseActivity.NetworkErrorException();
+                    //BaseActivity.NetworkErrorException();
                     //没有连上
                 }
             }
@@ -79,11 +79,14 @@ public class NetworkConnectChangedReceiver extends BroadcastReceiver {
                     if (info.getType() == ConnectivityManager.TYPE_WIFI
                             || info.getType() == ConnectivityManager.TYPE_MOBILE) {
                         Log.i("TAG", getConnectionType(info.getType()) + "连上");
+                        Variable.isNetwork = true;
+
                     }
                 } else {
 
+
                     BaseActivity.NetworkErrorException();
-                    Log.i("TAG", getConnectionType(info.getType()) + "断开");
+                    Log.i("TAG", getConnectionType(info.getType()) + "断开111");
                 }
             }
         }

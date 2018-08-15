@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bcg_agent_beijing"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/im_agent_xx"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="13dp"
+        android:src="@mipmap/im_agent_xx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:textColorHint="#82A7C3"
+            android:id="@+id/ed_agent_name"
+            android:hint="真实姓名"
+            android:background="@mipmap/ed_agent_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:textColorHint="#82A7C3"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ed_agent_phone"
+            android:hint="请输入手机号"
+            android:background="@mipmap/ed_agent_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/im_agent_zhengmian"
+                    android:src="@mipmap/im_agent_tiaojia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </ImageView>
+                <TextView
+                    android:textColor="#76D5FC"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/im_agent_zhengmian"
+                    android:text="上传正面"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginLeft="60dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/im_agent_fanmian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/im_agent_tiaojia">
+                </ImageView>
+
+                <TextView
+
+                    android:textColor="#76D5FC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/im_agent_fanmian"
+                    android:layout_centerHorizontal="true"
+                    android:text="上传正面" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/im_agent_tijiao"
+                android:src="@mipmap/bt_agent_tijiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/im_agent_quxiao"
+                android:layout_marginLeft="40dp"
+                android:src="@mipmap/bt_agent_quxiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

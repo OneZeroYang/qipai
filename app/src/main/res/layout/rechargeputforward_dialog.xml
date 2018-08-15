@@ -21,6 +21,7 @@
 
 
         <TextView
+            android:textColor="#71CCF2"
             android:text="888888888"
             android:gravity="center"
             android:id="@+id/tv_recharge_jingbi"
@@ -67,6 +68,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:textColor="#71CCF2"
                 android:paddingLeft="25dp"
                 android:textSize="20sp"
                 android:text="微信充值"
@@ -81,6 +83,7 @@
 
 
             <TextView
+                android:textColor="#71CCF2"
                 android:paddingLeft="25dp"
                 android:textSize="20sp"
                 android:text="支付宝充值"
@@ -95,6 +98,7 @@
 
 
             <TextView
+                android:textColor="#71CCF2"
                 android:paddingLeft="25dp"
                 android:textSize="20sp"
                 android:text="银行卡充值"

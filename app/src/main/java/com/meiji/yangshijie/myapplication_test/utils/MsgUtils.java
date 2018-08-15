@@ -8,9 +8,9 @@ import android.os.Message;
 
 public class MsgUtils {
     public static Message getmsg(int what,Object o){
-        if (what<=0||o==null){
-            return null;
-        }
+//        if (what<=0||o==null){      | BUG
+//            return null;            |
+//        }                           |
         Message msg=new Message();
         msg.what=what;
         msg.obj=o;

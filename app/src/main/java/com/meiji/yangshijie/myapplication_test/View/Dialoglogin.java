@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.graphics.Point;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.Display;
@@ -21,6 +23,7 @@ import android.widget.TextView;
 import com.meiji.yangshijie.myapplication_test.MainActivity;
 import com.meiji.yangshijie.myapplication_test.R;
 import com.meiji.yangshijie.myapplication_test.User_selectionActivity;
+import com.meiji.yangshijie.myapplication_test.utils.MsgUtils;
 import com.meiji.ysj.youxidating.Game1Activity;
 import com.meiji.ysj.youxidating.GameActivity;
 
@@ -46,11 +49,29 @@ public class Dialoglogin extends Dialog implements View.OnClickListener {
     private ImageView btLoginXx;
 
 
+    private Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what){
+                case 1:
+                    ProgressDialog.Stop();
+                    User_selectionActivity.activity.startActivity(new Intent(context,Game1Activity.class));
+                    User_selectionActivity.activity.finish();
+                    dismiss();
+                    break;
+
+            }
+        }
+    };
+
+
 
 
 
 
     public Dialoglogin(@NonNull Context context) {
+
+
 
 
 
@@ -153,6 +174,20 @@ public class Dialoglogin extends Dialog implements View.OnClickListener {
           *  描述：加载登录界面
           *  时间：2018/8/9 10:50
           **/
+        ProgressDialog.Show(context);
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(2000);
+                    handler.sendMessage(MsgUtils.getmsg(1,null));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+
+            }
+        }.start();
 
 
         /**
@@ -162,10 +197,7 @@ public class Dialoglogin extends Dialog implements View.OnClickListener {
 
         //startGameActivity();
 
-        User_selectionActivity.activity.startActivity(new Intent(context,Game1Activity.class));
-        User_selectionActivity.activity.finish();
 
-        this.dismiss();
 
 
     }

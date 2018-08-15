@@ -2,13 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.meiji.yangshijie.myapplication_test">
 
-    <!-- 网络验证相关权限 -->
+    <!-- 网络相关权限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.access_wifi_state" />
     <uses-permission android:name="android.permission.access_network_state" />
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <!-- 手机震动 -->
     <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--拍照权限-->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+
+    <!--读写SD卡相关权限-->
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -61,6 +73,25 @@
         <activity android:name="com.meiji.ysj.youxidating.Game1Activity"  android:configChanges="orientation|screenSize">
 
         </activity>
+
+<!--
+
+========拍照相关
+
+-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.meiji.ysj.youxidating.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public"></meta-data>
+        </provider>
+
+
+
+
     </application>
 
 </manifest>

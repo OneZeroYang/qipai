@@ -135,9 +135,9 @@ public abstract class BaseActivity extends Activity {
 
         if (dialogUtil==null){
             dialogUtil=new DialogUtil(context);
-            dialogUtil.CreateNetworkDialog();
-            dialogUtil.ShowNetworkDialog();
         }
+        dialogUtil.CreateNetworkDialog();
+        dialogUtil.ShowNetworkDialog();
     }
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

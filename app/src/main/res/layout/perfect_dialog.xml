@@ -43,6 +43,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:layout_weight="1"
                     android:id="@+id/ed_perfect_name"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -64,6 +65,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:layout_weight="1"
                     android:id="@+id/ed_perfect_id"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -85,6 +87,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:layout_weight="1"
                     android:id="@+id/ed_perfect_kahao"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -92,6 +95,7 @@
 
             </LinearLayout>
             <LinearLayout
+                android:id="@+id/tv_perfect_yinghang"
                 android:layout_marginTop="5dp"
                 android:background="@mipmap/ed_perfect_beijing"
                 android:orientation="horizontal"
@@ -105,7 +109,7 @@
                     <!--android:layout_height="wrap_content" />-->
                 <TextView
                     android:layout_gravity="center"
-                    android:id="@+id/tv_perfect_yinghang"
+
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
                     android:text="中国银行："
@@ -139,6 +143,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:layout_weight="1"
                     android:id="@+id/ed_perfect_kaihuyinghang"
                     android:background="@null"
                     android:layout_width="match_parent"
@@ -160,6 +165,7 @@
                     android:layout_height="wrap_content" />
 
                 <EditText
+                    android:layout_weight="1"
                     android:id="@+id/ed_perfect_kaihushi"
                     android:background="@null"
                     android:layout_width="match_parent"

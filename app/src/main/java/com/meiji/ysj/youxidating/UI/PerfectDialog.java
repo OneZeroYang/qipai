@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.meiji.yangshijie.myapplication_test.R;
@@ -24,7 +25,7 @@ public class PerfectDialog extends BaesDialog implements View.OnClickListener {
     private EditText edPerfectId;
     private EditText edPerfectKahao;
     private ImageView imPerfectYinghangtubiao;
-    private TextView tvPerfectYinghang;
+    private LinearLayout tvPerfectYinghang;
     private ImageView imPerfectXiala;
     private EditText edPerfectKaihuyinghang;
     private EditText edPerfectKaihushi;
@@ -58,7 +59,7 @@ public class PerfectDialog extends BaesDialog implements View.OnClickListener {
         edPerfectId = (EditText) findViewById(R.id.ed_perfect_id);//身份证号
         edPerfectKahao = (EditText) findViewById(R.id.ed_perfect_kahao);//银行卡号
         //imPerfectYinghangtubiao = (ImageView) findViewById(R.id.im_perfect_yinghangtubiao);//银行图标
-        tvPerfectYinghang = (TextView) findViewById(R.id.tv_perfect_yinghang);//那个银行
+        tvPerfectYinghang = (LinearLayout) findViewById(R.id.tv_perfect_yinghang);//那个银行
         imPerfectXiala = (ImageView) findViewById(R.id.im_perfect_xiala);//下拉按钮
         edPerfectKaihuyinghang = (EditText) findViewById(R.id.ed_perfect_kaihuyinghang);//开户银行
         edPerfectKaihushi = (EditText) findViewById(R.id.ed_perfect_kaihushi);//开户行市
@@ -82,6 +83,7 @@ public class PerfectDialog extends BaesDialog implements View.OnClickListener {
                 this.dismiss();
                 break;
             case R.id.im_perfect_xiala://下拉
+                new ConfirmPopWindow(context).showAtBottom(tvPerfectYinghang);
                 break;
             case R.id.bt_perfect_queding://确定
                 break;
