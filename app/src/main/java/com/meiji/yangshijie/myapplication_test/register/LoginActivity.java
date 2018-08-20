@@ -1,11 +1,6 @@
 package com.meiji.yangshijie.myapplication_test.register;
 
-import android.app.Dialog;
-import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,8 +8,8 @@ import android.widget.LinearLayout;
 
 import com.meiji.yangshijie.myapplication_test.BaseActivity;
 import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
-import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
+import com.meiji.utils.DialogUtil;
+import com.meiji.utils.ToastUtils;
 
 /**
  * 描述：登录Activity

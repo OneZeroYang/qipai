@@ -10,7 +10,7 @@ import android.os.Parcelable;
 import android.util.Log;
 
 import com.meiji.yangshijie.myapplication_test.BaseActivity;
-import com.meiji.yangshijie.myapplication_test.utils.Variable;
+import com.meiji.utils.Variable;
 
 
 /**

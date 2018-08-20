@@ -10,14 +10,9 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ProviderInfo;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.net.Uri;
-import android.support.annotation.Nullable;
 import android.support.v4.content.FileProvider;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.text.Html;
-import android.text.SpannableString;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Interpolator;
@@ -27,18 +22,15 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.lwkandroid.rtpermission.RTPermission;
-import com.lwkandroid.rtpermission.listener.OnPermissionResultListener;
 import com.meiji.yangshijie.myapplication_test.BaseActivity;
-import com.meiji.yangshijie.myapplication_test.MainActivity;
 import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
-import com.meiji.ysj.youxidating.UI.AgentDialog;
-import com.meiji.ysj.youxidating.UI.HeadPortraitDialog;
-import com.meiji.ysj.youxidating.UI.NewsDialog;
-import com.meiji.ysj.youxidating.UI.PersonalDialog;
-import com.meiji.ysj.youxidating.UI.SetUpDialog;
-import com.meiji.ysj.youxidating.utils.UrlUtils;
+import com.meiji.utils.ToastUtils;
+import com.meiji.ysj.youxidating.ui.AgentDialog;
+import com.meiji.ysj.youxidating.ui.HeadPortraitDialog;
+import com.meiji.ysj.youxidating.ui.NewsDialog;
+import com.meiji.ysj.youxidating.ui.PersonalDialog;
+import com.meiji.ysj.youxidating.ui.SetUpDialog;
+import com.meiji.utils.UrlUtils;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
 import com.zhihu.matisse.engine.impl.GlideEngine;
@@ -51,6 +43,9 @@ import java.util.List;
 
 import top.zibin.luban.Luban;
 import top.zibin.luban.OnCompressListener;
+
+import static com.meiji.utils.IsBeginSoundEffectUtils.Begin;
+import static com.meiji.utils.IsBeginSoundEffectUtils.IsMusic;
 
 
 /**
@@ -89,6 +84,7 @@ public class Game1Activity extends BaseActivity implements View.OnClickListener 
 
     @Override
     protected void initViews() {
+        IsMusic(this);
 
 
         gameImTouxiang = (ImageView) findViewById(R.id.game_im_touxiang);//头像
@@ -136,6 +132,7 @@ public class Game1Activity extends BaseActivity implements View.OnClickListener 
 
     @Override
     public void onClick(View view) {
+                Begin(getApplication());
         switch (view.getId()){
             case R.id.game_im_touxiang://头像
                 HeadPortraitDialog.Show(Game1Activity.this,activity);
@@ -210,10 +207,7 @@ public class Game1Activity extends BaseActivity implements View.OnClickListener 
         initanimation();//重新绘画动画
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-    }
+
 
     @Override
     protected void onDestroy() {

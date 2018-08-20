@@ -37,6 +37,23 @@ public class GlobalVariable {
     public static boolean isSound=false;//是否开启音效
 
 
+    /**
+     *
+     * ////////////////////////////////////控制音效和按钮声音
+     *
+     *
+     */
+
+    public final static String BeginSound="KAIQIYINGXIAO";//开启音效
+
+    public final static String ClosesSound="GUANBIYINGXIAO";//关闭音效
+
+
+    public final static String BeginMusic="KAIQIYINGYUE";//开启音乐
+
+
+    public final static String ClosesMusic="GUANBIYINGYUE";//关闭音乐
+
 
 
     /**
@@ -49,6 +66,8 @@ public class GlobalVariable {
         isvibrator=context.getSharedPreferences(SYSTEM_SETUP,0).getBoolean(SP_VIBRATOR,false);
         //volume=context.getSharedPreferences(SYSTEM_SETUP,0).getInt(SP_VOLUME,5);
         isMute=context.getSharedPreferences(SYSTEM_SETUP,0).getBoolean(SP_ISMUTE,false);
+        isSound=context.getSharedPreferences(SYSTEM_SETUP,0).getBoolean(SP_ISSOUND,false);
+
 
     }
 

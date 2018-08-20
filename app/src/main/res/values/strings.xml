@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Application_test</string>
+    <string name="app_name">盛乾国际</string>
     <string name="MainActivity_tv1">加载中。。。</string>
     <string name="login">登录</string>
     <string name="register">注册</string>

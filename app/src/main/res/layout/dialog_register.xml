@@ -37,7 +37,7 @@
             android:inputType="textPassword"
             android:id="@+id/ed_register_password"
             android:textColorHint="@color/login"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:hint="请输入密码"
             android:gravity="center"
             android:background="@mipmap/user_password"
@@ -47,7 +47,7 @@
             android:inputType="textPassword"
             android:id="@+id/ed_register_password1"
             android:textColorHint="@color/login"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:hint="请确认密码"
             android:gravity="center"
             android:background="@mipmap/user_password"
@@ -56,7 +56,7 @@
         <EditText
             android:id="@+id/ed_register_daili"
             android:textColorHint="@color/login"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:hint="代理邀请码"
             android:gravity="center"
             android:background="@mipmap/ic_dailiyaoqingma"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content" />
         
         <LinearLayout
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="3dp"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -99,7 +99,7 @@
             <CheckBox
                 android:id="@+id/ck_register_ck"
                 android:layout_width="30dp"
-                android:layout_height="40dp" />
+                android:layout_height="20dp" />
 
             <TextView
                 android:id="@+id/tv_register_kaihutiaoyue"
@@ -120,6 +120,8 @@
 
 
         <Button
+            android:layout_marginTop="5dp"
+
             android:id="@+id/bt_register_register"
             android:background="@mipmap/bt_redister"
             android:layout_width="wrap_content"

@@ -112,20 +112,26 @@
 
                     android:layout_marginLeft="5dp"
                     android:textColor="#83A8C3"
-                    android:text="中国银行："
+                    android:text="所属银行："
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
-
-
-                <ImageView
-
+                <TextView
                     android:layout_gravity="center"
-                    android:id="@+id/im_perfect_xiala"
-                    android:src="@mipmap/ic_perfect_xiala"
-                    android:layout_marginLeft="130dp"
+                    android:id="@+id/tv_perfect_bank"
+                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
+
+                <!--<ImageView-->
+
+                    <!--android:id="@+id/im_perfect_xiala"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:layout_marginLeft="130dp"-->
+                    <!--android:src="@mipmap/ic_perfect_xiala" />-->
 
             </LinearLayout>
             <LinearLayout

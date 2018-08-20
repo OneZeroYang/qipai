@@ -8,9 +8,11 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.meiji.yangshijie.myapplication_test.View.Dialoglogin;
-import com.meiji.yangshijie.myapplication_test.View.ForgetPasswordDialog;
-import com.meiji.yangshijie.myapplication_test.View.RegisterDialog;
+import com.meiji.yangshijie.myapplication_test.view.Dialoglogin;
+import com.meiji.yangshijie.myapplication_test.view.RegisterDialog;
+import com.meiji.utils.IsBeginSoundEffectUtils;
+
+import static com.meiji.utils.IsBeginSoundEffectUtils.IsMusic;
 
 
 public class User_selectionActivity extends BaseActivity implements View.OnClickListener {
@@ -35,6 +37,7 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
 
     @Override
     protected void initViews() {
+        IsMusic(this);
         activity=User_selectionActivity.this;
         loginLog = (ImageView) findViewById(R.id.login_log);
         loginBt1 = (Button) findViewById(R.id.login_bt1);
@@ -59,6 +62,7 @@ public class User_selectionActivity extends BaseActivity implements View.OnClick
      **/
     @Override
     public void onClick(View view) {
+        IsBeginSoundEffectUtils.Begin(getApplicationContext());
         switch (view.getId()) {
             case R.id.login_bt1:
 //                ToastUtils.showToast(getApplicationContext(), getResources().getString(R.string.login));

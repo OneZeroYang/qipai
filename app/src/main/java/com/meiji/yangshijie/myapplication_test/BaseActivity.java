@@ -1,29 +1,23 @@
 package com.meiji.yangshijie.myapplication_test;
 
-import android.accounts.NetworkErrorException;
 import android.app.Activity;
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.net.ConnectivityManager;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.KeyEvent;
-import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.meiji.Interface.NetworkCallk;
 import com.meiji.yangshijie.myapplication_test.Receiver.NetworkConnectChangedReceiver;
-import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
-import com.meiji.yangshijie.myapplication_test.utils.ToastUtils;
-import com.meiji.yangshijie.myapplication_test.utils.Variable;
+import com.meiji.utils.DialogUtil;
+import com.meiji.utils.ToastUtils;
+import com.meiji.utils.Variable;
 
-import static com.meiji.ysj.youxidating.utils.FileUtils.TAG;
+import static com.meiji.utils.IsBeginSoundEffectUtils.CloseMusic;
+import static com.meiji.utils.IsBeginSoundEffectUtils.IsMusic;
 
 /**
   *  描述：ACTIVITY的所有基类
@@ -85,6 +79,11 @@ public abstract class BaseActivity extends Activity {
 
     @Override
     protected void onPause() {
+     //   Log.i(TAG, "onPause: ");
+
+        CloseMusic(this);
+
+
         super.onPause();
     }
 
@@ -151,10 +150,12 @@ public abstract class BaseActivity extends Activity {
     }
     @Override
     protected void onRestart() {
+       // Log.i(TAG, "onRestart: ");
         if (dialogUtil!=null){
             dialogUtil.DismissDialg();
         }
         super.onRestart();
+        IsMusic(this);
     }
 
 
@@ -162,4 +163,6 @@ public abstract class BaseActivity extends Activity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
+
+    
 }

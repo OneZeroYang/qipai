@@ -1,16 +1,16 @@
 package com.meiji.yangshijie.myapplication_test.test;
 
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 
 import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.View.DialogView;
-import com.meiji.yangshijie.myapplication_test.View.Dialoglogin;
+import com.meiji.yangshijie.myapplication_test.view.DialogView;
+import com.meiji.yangshijie.myapplication_test.view.Dialoglogin;
 import com.meiji.ysj.youxidating.view.ParallelogramShape;
 import com.meiji.ysj.youxidating.view.ShapeImageView;
-
 
 /**
  * 描述：数据库测试activity

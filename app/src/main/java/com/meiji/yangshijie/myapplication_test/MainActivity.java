@@ -1,36 +1,27 @@
 package com.meiji.yangshijie.myapplication_test;
 
 import android.app.Activity;
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.net.ConnectivityManager;
-import android.net.wifi.WifiManager;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.Nullable;
-import android.util.Log;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.Receiver.NetworkConnectChangedReceiver;
-import com.meiji.yangshijie.myapplication_test.View.ProgressSeek;
-import com.meiji.yangshijie.myapplication_test.utils.DialogUtil;
-import com.meiji.yangshijie.myapplication_test.utils.MsgUtils;
-import com.meiji.yangshijie.myapplication_test.utils.Variable;
+
+import com.meiji.utils.DialogUtil;
+import com.meiji.utils.MsgUtils;
+import com.meiji.utils.Variable;
+import com.meiji.yangshijie.myapplication_test.view.ProgressSeek;
 import com.meiji.ysj.youxidating.Game1Activity;
+import com.meiji.ysj.youxidating.GlobalVariable;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
-
-import static android.content.ContentValues.TAG;
 
 /**
  * 描述：启动界面
@@ -45,12 +36,8 @@ public class MainActivity extends BaseActivity {
    // private ProgressBar mainPb1;
 
     private ProgressSeek mainPb1;
-
-    private int SRAT=0;//解决启动2次的常量
-
-
-    private  Thread thread=null;
-    int a=0;
+    private  Thread thread=null;//模拟进度条
+   // int a=0;
 
     private static Context context;
 
@@ -95,12 +82,20 @@ public class MainActivity extends BaseActivity {
 
         OkHttpUtils.initClient(okHttpClient);
 
+/**
+  *  描述：初始化数据
+  *  时间：2018/8/20 10:52
+  **/
+        GlobalVariable.init(getApplicationContext());
+
 
         /**
          *  描述：启动服务
          *  时间：2018/8/2 13:37
          **/
-        startService(new Intent(getApplicationContext(), SystemService.class));
+        Intent intent = new Intent(getApplicationContext(), SystemService.class);
+        intent.putExtra("action","begin");
+        startService(intent);
         initNetwork(getApplicationContext());
         initUser();
 
@@ -125,8 +120,8 @@ public class MainActivity extends BaseActivity {
         }
 
 
-        a++;
-        Log.i(TAG, "initViews: a==================================================================="+a);
+    //    a++;
+      //  Log.i(TAG, "initViews: a==================================================================="+a);
 
 
     }
@@ -191,7 +186,7 @@ public class MainActivity extends BaseActivity {
                                     dialogUtil.DismissDialg();
                                     dialogUtil=null;
                                 }
-                                Log.i(TAG, "run: 11111111111111111111111111111111111111111111111");
+                             //   Log.i(TAG, "run: 11111111111111111111111111111111111111111111111");
                                 startLoginActivity();
                             } else {
                                 //用户之前已登录
@@ -211,11 +206,11 @@ public class MainActivity extends BaseActivity {
      * 时间：2018/7/31 11:40
      **/
     private void startLoginActivity() {
-        if (SRAT==0){
-            SRAT++;
+
+
             startActivity(new Intent(getApplicationContext(), User_selectionActivity.class));
             finish();
-        }
+
 
     }
 
