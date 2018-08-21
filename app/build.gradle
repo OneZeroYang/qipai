@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 'android-27'
     defaultConfig {
-        applicationId "com.meiji.yangshijie.myapplication_test"
+        applicationId "com.meiji.yangshijie.login"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

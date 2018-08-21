@@ -11,8 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
 import com.meiji.utils.IsBeginSoundEffectUtils;
 import com.meiji.ysj.youxidating.Game1Activity;
 import com.meiji.Interface.FileCallk;

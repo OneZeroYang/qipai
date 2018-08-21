@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/tixian_beijing"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="end"
+        android:src="@mipmap/xx"
+        android:id="@+id/im_put_forward_xx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="35dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@mipmap/tixian_yinghang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#83A8C3"
+                android:id="@+id/tv_put_forward_bank"
+                android:layout_gravity="center"
+                android:text="中国银行"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/im_put_forward_xiala"
+                android:layout_marginLeft="100dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/tixian_xiala"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_put_forward_money"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="可提现￥288"
+            android:layout_marginTop="20dp"
+            android:background="@mipmap/tixian_jinge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/im_put_forward_tixian"
+            android:layout_marginTop="45dp"
+            android:src="@mipmap/tixian_queren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

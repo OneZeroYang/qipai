@@ -36,7 +36,7 @@
         <!--android:layout_height="20dp" />-->
 
 
-    <com.meiji.yangshijie.myapplication_test.view.ProgressSeek
+    <com.meiji.yangshijie.login.view.ProgressSeek
 
         android:layout_width="match_parent"
         android:layout_alignParentBottom="true"

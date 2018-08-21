@@ -22,8 +22,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.BaseActivity;
-import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.login.BaseActivity;
+import com.meiji.yangshijie.login.R;
 import com.meiji.utils.ToastUtils;
 import com.meiji.ysj.youxidating.ui.AgentDialog;
 import com.meiji.ysj.youxidating.ui.HeadPortraitDialog;

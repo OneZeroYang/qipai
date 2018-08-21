@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@mipmap/setpassword_beijing"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="0dp"
+            android:id="@+id/ed_password_ed1"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ed_password_ed2"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ed_password_ed3"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ed_password_ed4"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ed_password_ed5"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:maxLength="1"
+            android:imeOptions="actionDone|flagNoExtractUi"
+            android:gravity="center"
+            android:cursorVisible="false"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/ed_password_ed6"
+            android:background="@mipmap/setpasswor_ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/im_set_password_show"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/setpassword_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/im_set_password_vvv"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/setpassword_vvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/im_set_password_button"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/setpassword_queding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

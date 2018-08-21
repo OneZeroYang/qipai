@@ -11,10 +11,12 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.login.R;
 import com.meiji.ysj.youxidating.ui.DetailOfRechargeDialog;
 
 import java.util.List;
+
+import static com.meiji.utils.IsBeginSoundEffectUtils.Begin;
 
 
 /**
@@ -55,6 +57,7 @@ public class RechargeRecyclerViewAdapter extends RecyclerView.Adapter<RechargeRe
             public void onClick(View view) {
                 //点击事件
 
+                Begin(context);
                 DetailOfRechargeDialog.Show(context);
 
             }

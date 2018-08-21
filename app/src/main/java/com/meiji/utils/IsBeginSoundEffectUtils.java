@@ -4,7 +4,7 @@ package com.meiji.utils;
 import android.content.Context;
 import android.content.Intent;
 
-import com.meiji.yangshijie.myapplication_test.SystemService;
+import com.meiji.yangshijie.login.SystemService;
 import com.meiji.ysj.youxidating.GlobalVariable;
 
 /**

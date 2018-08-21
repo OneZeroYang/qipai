@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.PopupWindow;
 
-import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.login.R;
 
 /**
   *  描述：PopupWindow下拉框

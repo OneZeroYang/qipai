@@ -1,17 +1,19 @@
 package com.meiji.ysj.youxidating.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.InputType;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
 import com.meiji.utils.IsBeginSoundEffectUtils;
 import com.meiji.utils.ToastUtils;
 
@@ -28,6 +30,8 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
     private TextView tvRechargeWeixing;
     private TextView tvRechargeZhifubao;
     private TextView tvRechargeYinghangka;
+
+    public static Activity activity;
 
 
     private Context context;
@@ -57,6 +61,8 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
         tvRechargeJingbi = (TextView) findViewById(R.id.tv_recharge_jingbi);//金币
         btRechargeTixian = (ImageView) findViewById(R.id.bt_recharge_tixian);//提现
         edRechargeEd = (EditText) findViewById(R.id.ed_recharge_ed);//输入的充值金额
+        edRechargeEd.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_FLAG_DECIMAL);//只能输入数字和小数
+
         tvRechargeWeixing = (TextView) findViewById(R.id.tv_recharge_weixing);//微信充值
         tvRechargeZhifubao = (TextView) findViewById(R.id.tv_recharge_zhifubao);//支付宝充值
         tvRechargeYinghangka = (TextView) findViewById(R.id.tv_recharge_yinghangka);//银行卡充值
@@ -70,7 +76,8 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
 
     }
 
-    public static void Show(Context context){
+    public static void Show(Context context, Activity activity){
+        RechargePutForwardDialog.activity=activity;
         RechargePutForwardDialog rechargePutForwardDialog=new RechargePutForwardDialog(context);
         rechargePutForwardDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         rechargePutForwardDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
@@ -86,6 +93,7 @@ public class RechargePutForwardDialog extends BaesDialog implements View.OnClick
                 break;
             case R.id.bt_recharge_tixian://提现
                 ToastUtils.showToast(context,"请先完善个人信息！");
+                PutForwardDialog.Show(context);
                 break;
             case R.id.tv_recharge_weixing://微信充值
                 ToastUtils.showToast(context,"暂未开通！");

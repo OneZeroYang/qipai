@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/records_rl"
+    android:background="@mipmap/xiaofeijilu"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:paddingLeft="5dp"
+        android:textColor="#B2E7FF"
+        android:layout_centerVertical="true"
+        android:id="@+id/records_list_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="#FEB528"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/records_list_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:paddingRight="5dp"
+        android:textColor="#B2E7FF"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/records_list_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+
+</RelativeLayout>

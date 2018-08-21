@@ -8,7 +8,7 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.login.R;
 import com.meiji.Interface.SwitchButtonListener;
 
 

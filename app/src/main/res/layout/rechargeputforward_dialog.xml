@@ -58,6 +58,7 @@
             android:layout_height="match_parent">
 
             <EditText
+                android:imeOptions="actionDone|flagNoExtractUi"
                 android:id="@+id/ed_recharge_ed"
                 android:layout_marginTop="0dp"
                 android:layout_centerHorizontal="true"

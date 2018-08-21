@@ -10,8 +10,10 @@ import android.widget.TextView;
 
 import com.meiji.utils.DialogUtil;
 import com.meiji.utils.DialogUtils;
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
+
+import static com.meiji.utils.IsBeginSoundEffectUtils.Begin;
 
 /**
   *  描述：充值详情
@@ -59,6 +61,7 @@ public class DetailOfRechargeDialog extends BaesDialog{
         imDetailOfChargeXx.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Begin(context);
                 DetailOfRechargeDialog.this.dismiss();
             }
         });

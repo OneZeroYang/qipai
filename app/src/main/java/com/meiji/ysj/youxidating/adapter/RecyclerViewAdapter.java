@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.R;
+import com.meiji.yangshijie.login.R;
 
 
 /**

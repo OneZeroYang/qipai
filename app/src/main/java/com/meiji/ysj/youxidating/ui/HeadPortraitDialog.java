@@ -13,8 +13,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
 import com.meiji.utils.IsBeginSoundEffectUtils;
 import com.meiji.utils.ToastUtils;
 import com.meiji.ysj.youxidating.Game1Activity;

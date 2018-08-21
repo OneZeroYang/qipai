@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
 import com.meiji.utils.IsBeginSoundEffectUtils;
 import com.meiji.utils.ToastUtils;
 
@@ -107,7 +107,7 @@ public class PersonalDialog extends BaesDialog implements View.OnClickListener {
                 this.dismiss();
                 break;
             case R.id.tv_personal_congzhitixian://充值提现
-                RechargePutForwardDialog.Show(context);
+                RechargePutForwardDialog.Show(context,activity);
                 break;
             case R.id.tv_personal_lianxikefu://联系客服
                 ToastUtils.showToast(context,"暂时没有开通");

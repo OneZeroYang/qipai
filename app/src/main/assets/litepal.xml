@@ -7,7 +7,7 @@
     <list>
         <!--用户密码表-->
 
-        <mapping class="com.meiji.yangshijie.myapplication_test.db.UserData"></mapping>
+        <mapping class="com.meiji.yangshijie.login.db.UserData"></mapping>
 
 
     </list>

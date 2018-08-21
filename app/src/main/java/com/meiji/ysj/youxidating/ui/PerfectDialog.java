@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.meiji.network.BankNetWork;
 import com.meiji.Interface.NetworkCallk;
-import com.meiji.yangshijie.myapplication_test.R;
-import com.meiji.yangshijie.myapplication_test.view.BaesDialog;
+import com.meiji.yangshijie.login.R;
+import com.meiji.yangshijie.login.view.BaesDialog;
 import com.meiji.utils.IsBeginSoundEffectUtils;
 import com.meiji.utils.ToastUtils;
 import com.meiji.utils.DialogUtils;
